@@ -1,0 +1,84 @@
+# UPSC ESE Engineering Drawing: Previous Years Questions (PYQs 2017 - 2026) & Key Principles
+By Haider Sir (PW)
+
+## 1. High-Yield ESE Exam Principles & Formulas
+### A. Representative Fraction (R.F.)
+- $RF = \frac{\text{Length of drawing}}{\text{Actual length}}$
+- *Example*: If $1.5\text{ inches} = 1\text{ foot}$ ($1\text{ foot} = 12\text{ inches}$):
+  $$RF = \frac{1.5}{1 \times 12} = \frac{1.5}{12} = \frac{1}{8}$$
+
+### B. Oblique Projections: Cavalier vs Cabinet
+- Oblique projection: Projectors are parallel to each other and inclined at an angle (typically $30^\circ, 45^\circ$, or $60^\circ$) to the projection plane.
+- Front face parallel to projection plane retains **true shape and size**.
+- **Cavalier Projection**: Receding lines are drawn to **full size scale** ($1:1$).
+- **Cabinet Projection**: Receding lines are foreshortened to **half size scale** ($1:2$ or $0.5$) to reduce optical distortion.
+
+### C. Conic Sections from Cone Cutting Planes
+1. **Circle**: Cutting plane perpendicular to axis (parallel to base).
+2. **Ellipse**: Cutting plane inclined to axis cutting all generators on one side of apex.
+3. **Parabola**: Cutting plane parallel to one of the generator lines (angle with axis equals semi-apex angle).
+4. **Hyperbola**: Cutting plane parallel to axis or cutting both nappes of a double cone.
+5. **Rectangular Hyperbola**: Cutting plane parallel to axis of a right-angled cone ($2\theta = 90^\circ$); curve traced where product of distances from two perpendicular asymptotes is constant ($P \cdot V = C$).
+
+### D. Traces of Lines & Planes
+- **Horizontal Trace (H.T.)**: Point where line meets / penetrates Horizontal Plane (HP).
+- **Vertical Trace (V.T.)**: Point where line meets / penetrates Vertical Plane (VP).
+- **Line parallel to both HP and VP**: Has **NO trace**.
+- **Line inclined to HP and parallel to VP**: Has **only H.T. but no V.T.**
+- **Line inclined to VP and parallel to HP**: Has **only V.T. but no H.T.**
+- **Line perpendicular to HP**: H.T. coincides with top view (a point); has **no V.T.**
+- **Line perpendicular to VP**: V.T. coincides with front view (a point); has **no H.T.**
+- **Traces of a Plane**: The lines in which a plane meets the reference planes (HP and VP).
+
+### E. Loci and Special Curves
+- **Hypocycloid (Straight Line Special Case)**: If the radius of generating circle rolling inside a directing circle is **half the radius of the directing circle** ($r = \frac{R}{2}$), the locus of a point on the circumference is a **straight line** (diameter of the directing circle).
+- **Archimedean Spiral**: Locus of a point moving along a pendulum rod at uniform speed while the pendulum oscillates.
+- **Highway Interchanges**: Designed using transition curves based on **Hyperbola / Spiral / Lemniscate**.
+
+---
+
+## 2. Comprehensive ESE PYQ Answer Key (2017 to 2026)
+| Year | Q# | Question Summary | Correct Option & Explanation |
+|---|---|---|---|
+| **2017** | Q1 | Largest section cut from pentagonal prism lying on HP | **(c) Seven edges** (5 lateral faces + 2 end bases = max 7 sides). |
+| **2017** | Q2 | Shortest string wound around a cone | **(c) Largest chord of the development sector**. |
+| **2017** | Q3 | Locus of point moving along oscillating pendulum | **(a) A spiral (Archimedean spiral)**. |
+| **2017** | Q4 | Line inclined to VP and parallel to HP | **(a) True Length = Plan Length (Top View)**. |
+| **2017** | Q5 | Circle rolling inside another of twice radius ($r = R/2$) | **(c) A straight line** (Tusi couple theorem). |
+| **2017** | Q6 | Development of cone is semicircle | **(c) Slant height = base diameter ($L = 2r = d$)**. |
+| **2017** | Q7 | Plane parallel to VP cutting cone off-center | **(a) Hyperbola** (parallel to axis/VP). |
+| **2017** | Q8 | Correct statement for lateral development | **(c) Development of right circular cylinder is a rectangle**. |
+| **2017** | Q9 | Square pyramid freely suspended from base corner | **(d) Imaginary line joining corner with CG is Vertical**. |
+| **2019** | Q11 | Insert command in AutoCAD | **(d) Blocks and wblocks in current drawing**. |
+| **2019** | Q12 | Plane inclined to axis and parallel to generator | **(b) Parabola**. |
+| **2020** | Q13 | Rectangular hyperbola product of distances from two fixed lines | **(a) Asymptotes** ($x \cdot y = c$). |
+| **2020** | Q14 | Line passing through focus and perpendicular to directrix | **(a) Axis**. |
+| **2020** | Q15 | Dimensions in series placement options except | **(b) Proportional dimensioning** (not a valid dimensioning method). |
+| **2021** | Q16 | 3 mutually perpendicular edges make equal angles with POP | **(c) Isometric projection**. |
+| **2021** | Q17 | Points to remember while dimensioning | **(b) 1, 2, and 4 only** (Never dimension from hidden lines). |
+| **2021** | Q18 | Highway interchanges geometry | **(c) Hyperbola / Transition curves**. |
+| **2021** | Q19 | Lines on multi-view drawing represent | **(d) 1, 2 and 3** (Intersection, Edge view, Limiting elements). |
+| **2021** | Q20 | Section lines on adjacent assembled pieces | **(b) Opposite directions usually at 45°**. |
+| **2021** | Q21 | Oblique drawing advantage over isometric | **(c) Circular or irregular outlines on front face show true shape**. |
+| **2022** | Q22 | NOT included in Bill of Materials (BOM) | **(c) Cost** (Engineering BOM lists part #, name, material, qty). |
+| **2022** | Q23 | Continuous thin with zigzags line representation | **(a) Long-break line**. |
+| **2022** | Q24 | Receding lines drawn to full size in oblique projection | **(c) Cavalier projection**. |
+| **2022** | Q25 | Correct statement about oblique projection | **(d) Faces perpendicular to POP will be distorted in shape/size**. |
+| **2023** | Q26 | Scale 1.5 inches = 1 foot RF | **(a) 1/8** ($1.5 / 12 = 1/8$). |
+| **2023** | Q27 | Components of same shape but different dimensions | **(b) Tabular drawing**. |
+| **2023** | Q28 | Outlines of adjacent parts or movable parts line | **(c) Chain thin double-dashed line**. |
+| **2023** | Q29 | Line inclined to HP and parallel to VP trace | **(d) Only H.T. but no V.T.** |
+| **2023** | Q30 | Triangular prism on HP with face perpendicular to VP front view | **(b) A rectangle**. |
+| **2023** | Q31 | Isometric view drawing statements | **(d) 1, 2 and 3 are correct**. |
+| **2023** | Q32 | Non-isometric lines with ends in isometric planes | **(c) Offset method**. |
+| **2024** | Q33 | Instrument for curves that cannot be drawn with compass | **(c) French curves**. |
+| **2024** | Q34 | Line where a plane meets reference planes | **(b) Traces of the plane**. |
+| **2024** | Q35 | Methods for line of intersection of interpenetrating solids | **(a) Line method and cutting plane method**. |
+| **2024** | Q36 | Pyramids and cones development using true length as radius | **(b) Radial-line development**. |
+| **2025** | Q37 | Plane making same angle with axis as elements do | **(c) Parabola**. |
+| **2025** | Q38 | NOT a type of parallel projection | **(a) Conic (Perspective) projection**. |
+| **2025** | Q39 | Receding lines full scale oblique projection | **(a) Cavalier projection** (Note: Cabinet is half scale). |
+| **2025** | Q40 | Observer at infinity with inclined projectors to POP | **(c) Oblique projection**. |
+| **2025** | Q41 | Dimensioning system recommended in general rules | **(d) Unidirectional system** (or Aligned; Unidirectional standard in ISO). |
+| **2026** | Q42 | Projection of a point statements | **(a) 2 and 3 only** (Line joining FV and TV is projector). |
+| **2026** | Q43 | Traces of a line statements | **(b) 1, 3 and 4** (When inclined to HP and parallel to VP, it has HT only). |

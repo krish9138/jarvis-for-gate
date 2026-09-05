@@ -1,0 +1,82 @@
+# ESE / GATE Engineering Graphics & Design - Lectures 20 & 21: Section of Solids & Development of Surfaces
+By Haider Sir (PW)
+
+## 1. Section of Solids: Fundamental Concepts & Purpose
+- **Why Draw Sectional Views?**:
+  1. To clearly reveal the **internal details, cavities, holes, and assembly relationships** of complex mechanical components.
+  2. To avoid **excessive, confusing dashed (hidden) lines** on exterior views.
+
+### Types of Sectional Views:
+1. **Full Section**: The cutting plane passes entirely through the solid, cutting it into two halves (one half imagined discarded).
+2. **Half Section**: Used for **symmetrical objects** to show both internal and external features in a single view. The cutting plane cuts one quarter ($1/4$) of the object; one fourth is discarded, leaving half the view sectioned and the other half unsectioned.
+3. **Broken-out / Partial Section**: Localized interior view without cutting the full part.
+4. **Revolved / Removed Section**: Section of a bar, spoke, or arm turned $90^\circ$ into the drawing plane.
+
+---
+
+## 2. Hatching / Section Lines Standards (ISO & BIS)
+- Drawn in the precise areas where the cutting plane actually slices through solid material.
+- **Line Specifications**: Continuous thin lines drawn uniformly at an angle of **$45^\circ$ to the horizontal** (or principal centerline).
+- **Spacing**: Uniformly spaced approx. **2 mm to 3 mm apart**.
+- Section lines on adjacent assembled parts are drawn in **opposite directions** (e.g., $+45^\circ$ and $-45^\circ$).
+
+---
+
+## 3. Special Sectioning Rules (Components Left Unsectioned)
+### Rule 1: Thin Ribs and Webs
+- If a rib/web is cut **longitudinally** (i.e. cutting plane parallel to the flat face / dividing its thickness) $\rightarrow$ **Section lines are NOT shown in the rib area** (left unsectioned).
+- If a rib/web is cut **transversely / perpendicularly** to its thickness $\rightarrow$ **Section lines ARE drawn** in the cut area.
+
+### Rule 2: Fasteners & Standard Machine Parts
+- Machine elements such as **bolts, nuts, studs, shafts, spindles, cotters, keys, rivets, pins, and gear teeth** are **LEFT UNSECTIONED** when the cutting plane passes longitudinally along their axes.
+- If cut perpendicular (cross-section) to their axis, section hatching is shown.
+
+---
+
+## 4. Cutting Plane Orientations & Section Shapes
+1. **Cutting Plane Perpendicular to V.P. & Parallel to H.P.**:
+   - Shown as a horizontal line in Front View.
+   - **Sectional Top View** shows the **True Shape of the section**.
+2. **Cutting Plane Perpendicular to H.P. & Parallel to V.P.**:
+   - Shown as a line in Top View.
+   - **Sectional Front View** shows the **True Shape of the section**.
+3. **Auxiliary Inclined Plane (A.I.P.) (Inclined to H.P. & Perpendicular to V.P.)**:
+   - Appears as an inclined line in Front View.
+   - Sectional Top View is an apparent / foreshortened shape.
+   - **True Shape** is obtained on an auxiliary plane set **Parallel to the cutting plane**.
+4. **Auxiliary Vertical Plane (A.V.P.) (Inclined to V.P. & Perpendicular to H.P.)**:
+   - Appears as an inclined line in Top View.
+   - True shape obtained on an auxiliary plane parallel to the cutting plane.
+
+### True Section Shapes of Common Solids:
+- **Cube** cut by AIP passing through solid diagonal $\rightarrow$ **Rhombus** (or regular hexagon if passing through midpoints of 6 edges).
+- **Square Pyramid** cut by AIP parallel to base edge $\rightarrow$ **Trapezium**.
+- **Cone** cut by plane parallel to axis / profile plane $\rightarrow$ **Hyperbola**.
+- **Pentagonal Prism** lying on rectangular face on HP cut by AVP for maximum edges $\rightarrow$ **Seven edges (Heptagon)** (5 lateral faces + 2 base ends).
+
+---
+
+## 5. Development of Surfaces Basics (Lecture 21)
+- **Definition**: Unfolding the entire 3D exterior boundary surface of a solid onto a single 2D plane.
+- **Lateral Surface**: Total outer surface of the solid *excluding* the top and bottom end bases.
+- **Methods**:
+  - **Parallel-Line Method**: Used for **Prisms and Cylinders**.
+  - **Radial-Line Method**: Used for **Pyramids and Cones**.
+  - **Triangulation Method**: Used for **Transition Pieces**.
+  - **Zone / Lune Method**: Used for **Spheres (doubly curved surfaces)**.
+- **Shortest Path on Solids**: An insect moving around the curved surface of a cone from a base point back to the starting point travels along the **straight line / chord connecting the boundary points on the 2D development sector**.
+
+---
+
+## 6. Lectures 20 & 21 - Practice MCQs & Answer Key
+1. **Q1**: Sectional view most suitable for showing both internal and external features $\rightarrow$ **(b) Half section**.
+2. **Q2**: Why is a shaft cut longitudinally left unsectioned $\rightarrow$ **(b) To maintain clarity of the drawing**.
+3. **Q3**: Features typically left unsectioned when cut longitudinally $\rightarrow$ **(b) 1, 2, 3 (Screws, Webs, Gear teeth)**.
+4. **Q4**: Statements true about half-sectional view $\rightarrow$ **(b) 1, 2, 3**.
+5. **Q5**: Views providing clarity and revealing internal features $\rightarrow$ **(a) Sectional views**.
+6. **Q6**: Cube on HP cut by AIP passing through solid diagonal true shape $\rightarrow$ **(d) Rhombus**.
+7. **Q7**: Square pyramid on HP cut by AIP true shape $\rightarrow$ **(c) Trapezium**.
+8. **Q8**: Cone cut by section plane parallel to profile plane true shape $\rightarrow$ **(c) Hyperbola**.
+9. **Q9**: To obtain true shape of section of solid, auxiliary plane is set $\rightarrow$ **(c) Parallel to cutting plane**.
+10. **Q10**: Triangular prism resting on rectangular face cut by horizontal plane $\rightarrow$ **(c) Rectangle**.
+11. **Q11**: Shortest path travelled by insect around cone $\rightarrow$ **(d) Straight line on development (largest chord)**.

@@ -1,0 +1,60 @@
+# ESE / GATE ICT - Lecture 07: Satellite Communication, Orbital Mechanics, Frequency Bands & GNSS Systems
+By Haider Sir (PW)
+
+## 1. Principles of Satellite Communication
+A communication satellite functions as an orbital relay station containing electronic **Transponders** that receive uplink signals from ground stations, frequency-shift and amplify them, and beam downlink signals back to Earth.
+
+### A. Active vs Passive Satellites:
+- **Active Satellites**: Contain active on-board electronic transponders, power amplifiers, and solar arrays to receive, amplify, process, and retransmit signals back to Earth. (Standard in modern DTH, communications, GPS).
+- **Passive Satellites**: Non-powered orbital reflectors (e.g. metallic spheres like *Echo 1*) that merely reflect RF energy like a passive mirror in space; severe signal attenuation ($1/R^4$ space loss).
+
+### B. Parabolic Dish Antenna Physics:
+- Exploits the geometric reflection property of a **paraboloid**: Parallel incident radio waves reflecting off the curved surface converge precisely at the **Focal Point**, where the feed horn / LNB is positioned to maximize signal capture.
+
+---
+
+## 2. Satellite Orbits & Characteristics
+| Orbit Class | Acronym | Altitude Range | Orbital Period | Typical Application & Features |
+|---|---|---|---|---|
+| **Low Earth Orbit** | **LEO** | $500 - 2,000\text{ km}$ | 90–120 minutes | Low propagation delay; high-speed satellite broadband constellations (**Starlink**, OneWeb, earth imaging). Fast-moving relative to ground. |
+| **Medium Earth Orbit** | **MEO** | $2,000 - 36,000\text{ km}$ | ~12 hours | Global Navigation Satellite Systems (**GPS, GLONASS, Galileo**). Intermediate latency. |
+| **Geostationary Earth Orbit** | **GEO** | **$35,786\text{ km} \approx 36,000\text{ km}$** | **Exactly 23h 56m 4s (24h)** | Synchronized with Earth's rotation in the equatorial plane. **Appears completely stationary** in the sky $\rightarrow$ ideal for DTH TV broadcasting & weather monitoring (**INSAT, GSAT**). High latency (~250 ms one-way). |
+| **Geosynchronous Orbit** | **GSO** | ~$36,000\text{ km}$ | 24 hours | Orbit inclined to equatorial plane; satellite traces a "figure-8" (analemma) pattern relative to ground observers. |
+| **Highly Elliptical Orbit** | **HEO** | Variable ($500\text{ km}$ perigee to $>40,000\text{ km}$ apogee) | Variable (e.g. Molniya orbit) | Provides extended dwelling coverage over high-latitude polar regions. |
+
+---
+
+## 3. Satellite Communication Frequency Bands
+| Frequency Band | Frequency Range | Key Characteristics & Applications |
+|---|---|---|
+| **L-Band** | $1 - 2\text{ GHz}$ | Low atmospheric attenuation; resilient to rain fade $\rightarrow$ used in **Mobile Satellite Services & GNSS (GPS/NavIC)**. |
+| **C-Band** | $4 - 8\text{ GHz}$ | Highly reliable and stable during tropical monsoon rain $\rightarrow$ traditional commercial **TV satellite broadcasting & telecom backhaul**. |
+| **Ku-Band** | $12 - 18\text{ GHz}$ | Higher bandwidth, smaller dish antennas ($60\text{ cm}$) $\rightarrow$ modern **DTH Home TV broadcasting** (Tata Play, Dish TV). Moderately susceptible to rain fade. |
+| **Ka-Band** | $26 - 40\text{ GHz}$ | Very high data rates and compact spot-beam antennas $\rightarrow$ modern **high-throughput satellite broadband**. Highly susceptible to rain fade and atmospheric absorption. |
+
+---
+
+## 4. GNSS (Global Navigation Satellite Systems)
+Global constellations providing 3D positioning ($X, Y, Z$) and atomic clock timing via trilateration of radio signals:
+
+| System Name | Operating Nation / Agency | Constellation Size | Orbit Type | Notes |
+|---|---|---|---|---|
+| **GPS (NAVSTAR)** | United States | 31 active satellites | MEO (~20,200 km) | World's first and most widely deployed global system. |
+| **GLONASS** | Russia | 24 active satellites | MEO (~19,100 km) | Global coverage with high-latitude accuracy. |
+| **Galileo** | European Union | 30 satellites | MEO (~23,222 km) | High-precision civilian-controlled system. |
+| **BeiDou (BDS-3)** | China | 35 satellites | MEO + GEO + IGSO | Global coverage with highest density in Asia-Pacific. |
+
+---
+
+## 5. Indian Navigation Systems: NavIC & GAGAN
+### A. NavIC (Navigation with Indian Constellation / IRNSS):
+- **Type**: **Independent Regional Satellite Navigation System** developed entirely by **ISRO**.
+- **Coverage**: Covers all of India and an extended primary service region up to **$1,500\text{ km}$ beyond Indian borders**.
+- **Constellation**: Consists of **7 operational satellites** (3 in Geostationary GEO and 4 in Geosynchronous GSO inclined orbits).
+- **Strategic Value**: Guarantees sovereign, uninterrupted position, velocity, and timing (PVT) data for India's military, disaster management, civil aviation, and commercial fleet tracking without reliance on foreign-controlled GPS.
+
+### B. GAGAN (GPS Aided GEO Augmented Navigation):
+- **Type**: **Satellite-Based Augmentation System (SBAS)** jointly developed by **ISRO** and the **Airports Authority of India (AAI)**.
+- **Function**: Receives GPS signals, calculates ionospheric/atmospheric corrections at ground reference stations, and re-broadcasts precision correction data via geostationary communication satellites (GSATs).
+- **Primary Mission**: Enhances safety-of-life civil aviation precision approach and landing over Indian and adjacent oceanic airspace.
+- **Global Counterparts**: **WAAS** (USA), **EGNOS** (Europe), **MSAS** (Japan).

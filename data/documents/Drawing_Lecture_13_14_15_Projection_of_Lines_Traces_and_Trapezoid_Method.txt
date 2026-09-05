@@ -1,0 +1,95 @@
+# ESE / GATE Engineering Graphics & Design - Lectures 13, 14 & 15: Projection of Straight Lines, Traces & Trapezoid Method
+By Haider Sir (PW)
+
+## 1. Fundamental Line Orientations & Projections
+A straight line has length and orientation.
+- **True Length ($TL$)**: The actual physical length of the line in 3D space.
+- **$\theta$ (Theta)**: True inclination of the line with the **Horizontal Plane (H.P.)**.
+- **$\phi$ (Phi)**: True inclination of the line with the **Vertical Plane (V.P.)**.
+- **$\alpha$ (Alpha)**: Apparent inclination of Front View (Elevation) with $xy$.
+- **$\beta$ (Beta)**: Apparent inclination of Top View (Plan) with $xy$.
+- **Golden Inequality**:
+  $$\alpha > \theta \quad \text{and} \quad \beta > \phi$$
+
+### True Length Visibility Rules:
+1. **Line Parallel to H.P. & Parallel to V.P.**:
+   - Both Front View and Top View show **True Length** ($TL$) parallel to $xy$. (Has **NO trace**).
+2. **Line Perpendicular to H.P. & Parallel to V.P.**:
+   - Front View shows **True Length** perpendicular to $xy$.
+   - Top View appears as a **single point** ($a(b)$).
+   - Has **only Horizontal Trace (H.T.)** which coincides with the Top View point.
+3. **Line Perpendicular to V.P. & Parallel to H.P.**:
+   - Top View shows **True Length** perpendicular to $xy$.
+   - Front View appears as a **single point** ($a'(b')$).
+   - Has **only Vertical Trace (V.T.)** which coincides with the Front View point.
+4. **Line Inclined to H.P. ($\theta$) & Parallel to V.P.**:
+   - Front View shows **True Length ($TL$)** at true inclination $\theta$ to $xy$.
+   - Top View shows reduced length ($TL \cos\theta$) parallel to $xy$.
+   - Has **only H.T. but NO V.T.**
+5. **Line Inclined to V.P. ($\phi$) & Parallel to H.P.**:
+   - Top View shows **True Length ($TL$)** at true inclination $\phi$ to $xy$.
+   - Front View shows reduced length ($TL \cos\phi$) parallel to $xy$.
+   - Has **only V.T. but NO H.T.**
+
+---
+
+## 2. Line Inclined to BOTH H.P. and V.P. (General Case)
+- Neither Front View nor Top View shows the True Length ($TL$) or True Inclinations ($\theta, \phi$).
+- Both views are foreshortened to **Length of Front View ($LFV$)** and **Length of Top View ($LTV$)**.
+
+### The 12 Fundamental Parameters of a Line:
+1. True Length ($TL$)
+2. True inclination with H.P. ($\theta$)
+3. True inclination with V.P. ($\phi$)
+4. Locus of front view point $a'$ (distance of $A$ from H.P.)
+5. Locus of top view point $a$ (distance of $A$ from V.P.)
+6. Length of Top View ($LTV = TL \cos\theta$)
+7. Length of Front View ($LFV = TL \cos\phi$)
+8. Apparent angle in Front View ($\alpha$)
+9. Apparent angle in Top View ($\beta$)
+10. Locus of front view point $b'$ / $b_1'$ (distance of $B$ from H.P.)
+11. Locus of top view point $b$ / $b_2$ (distance of $B$ from V.P.)
+12. Distance between end projectors ($D$)
+
+### Trigonometric Relations:
+$$\cos\theta = \frac{LTV}{TL}, \quad \cos\phi = \frac{LFV}{TL}$$
+$$\sin\theta = \frac{\Delta h}{TL}, \quad \sin\phi = \frac{\Delta d}{TL}$$
+where $\Delta h = |h_B - h_A|$ (difference in height from HP) and $\Delta d = |d_B - d_A|$ (difference in depth from VP).
+
+### Condition #7: Line Contained in Profile Plane
+- When $\theta + \phi = 90^\circ$, the line lies in a profile plane.
+- Both Front View and Top View lie on a **single straight line perpendicular to $xy$**.
+- True length is seen only in the **Profile (Side) View**.
+
+---
+
+## 3. Traces of a Line Inclined to Both Planes
+- **Horizontal Trace (H.T.)**:
+  - Extend the Front View ($b'a'$) to intersect $xy$ at point $h'$.
+  - Draw a perpendicular projector from $h'$ to intersect the extended Top View ($ba$) $\rightarrow$ point of intersection is **H.T. ($h$)**.
+- **Vertical Trace (V.T.)**:
+  - Extend the Top View ($ba$) to intersect $xy$ at point $v$.
+  - Draw a perpendicular projector from $v$ to intersect the extended Front View ($b'a'$) $\rightarrow$ point of intersection is **V.T. ($v'$)**.
+
+---
+
+## 4. The Trapezoid Method (Lecture 15)
+An analytical/geometric method to determine $TL, \theta, \phi$ directly from given projection distances when rotated views are not drawn:
+- Construct a right-angled trapezoid using:
+  - Base = Distance between end projectors ($D$)
+  - Vertical parallel sides = Distances from reference plane ($h_A$ and $h_B$ for HP, or $d_A$ and $d_B$ for VP).
+  - Slanted side = **True Length ($TL$)**.
+  - Angle between slanted side and base = **True inclination ($\theta$ or $\phi$)**.
+- Formula:
+  $$TL = \sqrt{D^2 + (h_B - h_A)^2 + (d_B - d_A)^2}$$
+
+### Numerical Example (Lecture 15 Problem):
+- $A$: 20 mm above HP, 25 mm in front of VP ($h_A = 20, d_A = 25$)
+- $B$: 40 mm above HP, 65 mm in front of VP ($h_B = 40, d_B = 65$)
+- Distance between end projectors $D = 50\text{ mm}$.
+- Calculation:
+  $$\Delta h = 40 - 20 = 20\text{ mm}, \quad \Delta d = 65 - 25 = 40\text{ mm}$$
+  $$LTV = \sqrt{D^2 + \Delta d^2} = \sqrt{50^2 + 40^2} = \sqrt{2500 + 1600} = \sqrt{4100} \approx 64.03\text{ mm}$$
+  $$LFV = \sqrt{D^2 + \Delta h^2} = \sqrt{50^2 + 20^2} = \sqrt{2500 + 400} = \sqrt{2900} \approx 53.85\text{ mm}$$
+  $$TL = \sqrt{D^2 + \Delta h^2 + \Delta d^2} = \sqrt{2500 + 400 + 1600} = \sqrt{4500} \approx 67.08\text{ mm}$$
+  $$\tan\theta = \frac{\Delta h}{LTV} = \frac{20}{64.03}, \quad \tan\phi = \frac{\Delta d}{LFV} = \frac{40}{53.85}$$

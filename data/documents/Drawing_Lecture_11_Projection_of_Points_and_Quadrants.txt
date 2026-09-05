@@ -1,0 +1,67 @@
+# ESE / GATE Engineering Graphics & Design - Lecture 11: Projection of Points & Quadrant Systems
+By Haider Sir (PW)
+
+## 1. Reference Planes & 4-Quadrant System
+Orthographic projection uses two principal planes of projection:
+1. **Horizontal Plane (H.P.)**: Rotated $90^\circ$ clockwise to lie flat on the drawing sheet.
+2. **Vertical Plane (V.P.)**: Remains stationary in front of the observer.
+3. **Reference Line ($xy$)**: The line of intersection between H.P. and V.P.
+
+### The 4 Quadrants Matrix:
+| Quadrant | Position Relative to H.P. & V.P. | Elevation / Front View ($p'$) | Plan / Top View ($p$) |
+|---|---|---|---|
+| **1st Quadrant** | **Above H.P. & In front of V.P.** | **Above $xy$ line** | **Below $xy$ line** |
+| **2nd Quadrant** | **Above H.P. & Behind V.P.** | **Above $xy$ line** | **Above $xy$ line** (both overlap above $xy$) |
+| **3rd Quadrant** | **Below H.P. & Behind V.P.** | **Below $xy$ line** | **Above $xy$ line** |
+| **4th Quadrant** | **Below H.P. & In front of V.P.** | **Below $xy$ line** | **Below $xy$ line** (both overlap below $xy$) |
+
+### Fundamental Rules for Point Projections:
+- **Distance from H.P.** is always seen and measured in the **Front View (Elevation)** above or below $xy$.
+- **Distance from V.P.** is always seen and measured in the **Top View (Plan)** above or below $xy$.
+- **Distance from Profile Plane (P.P.)** is the horizontal distance between the projector of the point and the reference line $x_1 y_1$.
+- **Point lying ON the H.P.**: Its distance from H.P. is zero $\rightarrow$ its Front View ($p'$) lies **on the $xy$ line**.
+- **Point lying ON the V.P.**: Its distance from V.P. is zero $\rightarrow$ its Top View ($p$) lies **on the $xy$ line**.
+
+---
+
+## 2. 3D Spatial Geometry & Distance Formulas
+Let a point $P$ in the 1st Quadrant have:
+- Distance from H.P. = $h$ (Height $\rightarrow$ Front View height $p'$)
+- Distance from V.P. = $d$ (Depth $\rightarrow$ Top View distance $p$)
+- Distance from P.P. = $w$ (Distance from $x_1 y_1$)
+
+1. **Distance between Front View ($p'$) and Top View ($p$)**:
+   $$\text{Distance} = h + d$$
+2. **Distance between Front View ($p'$) and Side View ($p''$)**:
+   $$\text{Distance} = w + d$$
+3. **Shortest Distance from Top View ($p$) to Side View ($p''$)**:
+   $$\text{Distance} = \sqrt{(h + d)^2 + (w + d)^2}$$
+4. **Shortest Distance from Point $P$ to the Intersection of H.P. and V.P. (the $xy$ line)**:
+   $$\text{Shortest Distance to } xy = \sqrt{h^2 + d^2}$$
+
+---
+
+## 3. First Angle vs Third Angle Projection Standards
+- **BIS (Bureau of Indian Standards)** and **ISO** recommend **First Angle Projection** (`symbol: frustum of cone with base circle to right`).
+- **Relative Positions**:
+  - *1st Angle*: Observer $\rightarrow$ **Object** $\rightarrow$ Plane of Projection (Object is placed in between).
+    - Right Side View is drawn on the **Left of Elevation (FV)**.
+    - Top View is drawn **Below Elevation (FV)**.
+  - *3rd Angle*: Observer $\rightarrow$ **Plane of Projection** $\rightarrow$ Object (Plane is placed in between).
+
+---
+
+## 4. Lecture 11 - Key MCQs & Numerical Solutions
+1. **Dimensions in Right Side View**: **(d) Height and Breadth** (FV exhibits Length & Height; TV exhibits Length & Breadth).
+2. **Angle of Projection Symbol**: **(c) Frustum of a cone**.
+3. **BIS Recommended Projection**: **(a) First angle projection**.
+4. **First Angle Arrangement**: **(a) Object is placed in between observer and plane**.
+5. **Cabinet Projection Classification**: **(c) Parallel (Oblique) projection**.
+6. **Photographic Projection**: **(a) Perspective projection** (projectors converge at eye/station point).
+7. **Orthographic Projection Definition**: **(c) Projectors are parallel to each other and perpendicular to plane of projection**.
+8. **Point 2nd Quadrant (20 from HP, 10 from VP)**: **(a) Front view 20 above xy, Top view 10 above xy**.
+9. **Front view on xy $\rightarrow$ Point is**: **(a) On the H.P.**
+10. **Top view on xy $\rightarrow$ Point is**: **(b) On the V.P.**
+11. **Shortest distance to intersection of HP & VP when $d=35\text{ mm}$ and shortest dist $=42\text{ mm}$**:
+    $$h = \sqrt{42^2 - 35^2} = \sqrt{1764 - 1225} = \sqrt{539}\text{ mm} \rightarrow \mathbf{(a)\ \sqrt{539}}$$
+12. **Point equidistant from HP and VP ($h=d$)**: Shortest distance makes angle **(c) 45°** with reference lines.

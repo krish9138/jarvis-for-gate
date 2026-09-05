@@ -1,0 +1,85 @@
+# ESE / GATE Engineering Graphics & Design - Lecture 02: Conic Sections, Eccentricity & Conic Geometry
+By Haider Sir (PW)
+
+## 1. Conic Sections: Generation from Right Circular Cone
+A right circular double cone (two nappes joined at apex) cut by a section plane yields different conic sections depending on the cutting plane angle $\theta$ relative to the cone axis angle $\alpha$ (semi-apex angle) or generator:
+
+| Cutting Plane Condition | Resulting Conic Section | Key Geometric Characteristics |
+|---|---|---|
+| **Perpendicular to Axis** ($\theta = 90^\circ$) | **Circle** | Symmetrical closed curve, eccentricity $e = 0$ |
+| **Inclined to Axis & cuts all generators** ($\theta > \alpha$) | **Ellipse** | Closed oval curve, eccentricity $e < 1$ |
+| **Parallel to one generator line** ($\theta = \alpha$) | **Parabola** | Open symmetrical curve, eccentricity $e = 1$ |
+| **Parallel to / cuts at angle smaller than semi-apex angle** ($\theta < \alpha$) | **Hyperbola** | Open curve with two separate branches, $e > 1$ |
+| **Parallel to Axis of Right-Angled Cone** ($2\alpha = 90^\circ$) | **Rectangular Hyperbola** | Included angle between asymptotes is $90^\circ$, $e = \sqrt{2}$ |
+| **Passing through Apex** | **Straight Intersecting Lines / Triangle** | Degenerate conic |
+
+---
+
+## 2. Conic as a Locus of a Point (Focus-Directrix Property)
+- **Definition**: A conic is the locus of a point moving in a plane such that the ratio of its distance from a fixed point (**Focus**, $F$) to its perpendicular distance from a fixed straight line (**Directrix**, $DD'$) is always constant.
+- **Eccentricity ($e$)**:
+  $$e = \frac{\text{Distance of point from Focus}}{\text{Distance of point from Directrix}} = \frac{PF}{PM}$$
+
+### Eccentricity Values Matrix:
+- **Circle**: $e = 0$
+- **Ellipse**: $0 < e < 1$ (Distance to focus < Distance to directrix)
+- **Parabola**: $e = 1$ (Distance to focus = Distance to directrix)
+- **Hyperbola**: $e > 1$ (Distance to focus > Distance to directrix)
+- **Rectangular Hyperbola**: $e = \sqrt{2} \approx 1.414$
+
+### Important Conic Terminology:
+1. **Directrix ($DD'$)**: Fixed straight line perpendicular to the principal axis.
+2. **Axis ($CC'$)**: Line passing through the focus and perpendicular to the directrix.
+3. **Vertex ($V$)**: Point of intersection of the conic curve with its axis. The vertex is the point on the curve **closest to the focus**.
+4. **Focus ($F$)**: Fixed focal point on the axis.
+5. **Ordinate**: Line segment perpendicular to the axis from any point on the curve to the axis.
+6. **Double Ordinate**: Chord perpendicular to the axis.
+7. **Latus Rectum ($LL'$)**: Double ordinate passing directly through the focus.
+
+---
+
+## 3. Special Definitions & Formulas for Ellipse and Hyperbola
+### Ellipse (Sum of Focal Distances Constant):
+- **Definition**: Locus of a point such that the **sum of its distances from two fixed points (foci $F_1, F_2$) is constant and equal to the Major Axis ($2a$)**.
+  $$F_1 P + F_2 P = 2a = \text{Major Axis}$$
+- **Distance from end of minor axis to focus** $= \frac{1}{2} \times \text{Major Axis} = a$.
+- **Formulas for Eccentricity ($e$) of an Ellipse**:
+  1. $e = \frac{\text{Distance between foci}}{\text{Length of major axis}} = \frac{F_1 F_2}{2a}$
+  2. $e = \frac{\text{Length of major axis}}{\text{Distance between directrices}} = \frac{2a}{MN}$
+  3. $e = \sqrt{\frac{\text{Distance between foci}}{\text{Distance between directrices}}} = \sqrt{\frac{F_1 F_2}{MN}}$
+  - *Numerical Example*: Distance between directrices $MN = 245\text{ mm}$, distance between foci $F_1 F_2 = 20\text{ mm}$:
+    $$2a = \sqrt{F_1 F_2 \times MN} = \sqrt{20 \times 245} = \sqrt{4900} = 70\text{ mm}$$
+
+### Hyperbola (Difference of Focal Distances Constant):
+- **Definition**: Locus of a point such that the **absolute difference of its distances from two fixed points (foci $F_1, F_2$) is constant and equal to the distance between vertices ($V_1 V_2 = \text{Transverse Axis}$)**.
+  $$|F_1 P - F_2 P| = V_1 V_2 = \text{Transverse Axis}$$
+
+### Engineering Applications of Conics:
+- **Parabola**: Path of a projectile under gravity; parabolic reflectors, bridge suspension cables.
+- **Ellipse**: Planetary orbits (Kepler's Law); arch bridges, elliptical gears.
+- **Rectangular Hyperbola**: Boyle's Law of gas expansion ($P \cdot V = C$), cooling tower profiles.
+
+---
+
+## 4. Lecture 02 - Practice MCQs & Answer Key
+1. **Q1**: Sections cut by a plane on right circular cone $\rightarrow$ **(b) Conic sections**.
+2. **Q2**: Revolving line forming double cone $\rightarrow$ **(c) Generator**.
+3. **Q3**: Plane cuts all generators at an angle $\rightarrow$ **(b) Ellipse**.
+4. **Q4**: Plane parallel to axis $\rightarrow$ **(a) Hyperbola**.
+5. **Q5**: Plane angle with axis < semi-apex angle $\rightarrow$ **(c) Hyperbola**.
+6. **Q6**: Plane parallel and away from axis $\rightarrow$ **(c) Hyperbola**.
+7. **Q7**: Asymptotes angle is $90^\circ \rightarrow$ **(d) Rectangular hyperbola**.
+8. **Q8**: Plane passing through apex $\rightarrow$ **(d) Triangle / Straight intersecting lines**.
+9. **Q9**: Eccentricity of ellipse $\rightarrow$ **(b) e < 1** (or $0 < e < 1$).
+10. **Q10**: Point on parabola closest to focus $\rightarrow$ **(a) Vertex**.
+11. **Q11**: Conic with eccentricity of unity ($e=1$) $\rightarrow$ **(b) Parabola**.
+12. **Q12**: Eccentricity = 2.2 ($e>1$) $\rightarrow$ **(b) Hyperbola**.
+13. **Q13**: Distance from fixed point > distance from fixed line $\rightarrow$ **(c) Hyperbola**.
+14. **Q14**: Distance from directrix > distance from focus $\rightarrow$ **(b) Less than one (Ellipse)**.
+15. **Q15**: Match conics: $e<1$ (Ellipse), $e=1$ (Parabola), $e>1$ (Hyperbola), $e=\sqrt{2}$ (Rectangular hyperbola) $\rightarrow$ **(c) A-iii, B-iv, C-ii, D-i**.
+16. **Q16**: Major axis 100 mm, minor axis 60 mm; distance of focus from end of minor axis $\rightarrow$ **(c) 50 mm** ($100/2 = 50\text{ mm}$).
+17. **Q17**: Eccentricity formulas for ellipse $\rightarrow$ **(d) All of the above**.
+18. **Q18**: Path of projectile ball in air $\rightarrow$ **(b) Parabolic**.
+19. **Q19**: Hollow cone cut through apex and base $\rightarrow$ **(d) Intersecting lines**.
+20. **Q20**: $MN = 245\text{ mm}, F_1 F_2 = 20\text{ mm} \rightarrow$ Distance between vertices $= \sqrt{20 \times 245} = 70\text{ mm} \rightarrow \mathbf{(c)\ 70\text{ mm}}$.
+21. **Q21**: Gas expansion $PV = C \rightarrow$ Curve name is **Rectangular Hyperbola**.

@@ -1,0 +1,62 @@
+# ESE / GATE ICT - Lecture 06: Communication Systems, Signals, Modulation, Performance & Cellular Tech
+By Haider Sir (PW)
+
+## 1. Elements of an Electronic Communication System
+A communication system consists of three foundational components:
+1. **Transmitter (Tx)**: Converts input message information into transmittable electrical or electromagnetic signals (encodes, modulates, amplifies).
+2. **Channel / Medium**: Physical or wireless transmission path through which signals propagate (twisted pair, coaxial, optical fiber, air, vacuum).
+3. **Receiver (Rx)**: Intercepts transmitted signals and reconstructs/demodulates them back into intelligible message data.
+
+---
+
+## 2. Signals, Modulation & Noise
+### A. Analog vs Digital Signals:
+- **Analog Signals**: Continuous, naturally occurring waveforms with infinitely variable amplitude values over time (e.g. human voice).
+- **Digital Signals**: Discrete, artificial square wave pulses representing binary $0$s and $1$s. Greater noise immunity, easier error detection/correction, and digital multiplexing.
+
+### B. Modulation & Bandwidth:
+- **Modulation**: Superimposing low-frequency baseband message signals onto a high-frequency carrier wave for efficient antenna radiation and long-distance transmission.
+  - Types: **AM** (Amplitude Modulation), **FM** (Frequency Modulation), **PM** (Phase Modulation), **QPSK** (Quadrature Phase Shift Keying).
+- **Bandwidth**: The total span of frequencies contained within a communication channel (measured in Hertz, Hz). Higher bandwidth allows higher data transfer rates (bps).
+
+### C. Transmission Noise Types:
+1. **Thermal (Johnson-Nyquist) Noise**: Unavoidable random electronic noise caused by thermal agitation of charge carriers inside conductors.
+2. **Crosstalk**: Unwanted coupling and signal leakage between adjacent wires or cables running closely in parallel.
+3. **Impulse Noise**: Sudden, sharp non-continuous spikes of high energy caused by external electromagnetic phenomena (lightning, power line switching, motor brushes).
+
+---
+
+## 3. The 5 Core Network Performance Parameters
+1. **Bandwidth**: Maximum potential data rate a channel can carry (bps):
+   $$\text{Optical Fiber} > \text{Wi-Fi} > \text{Cellular} > \text{Copper Twisted Pair}$$
+2. **Latency (Propagation Delay)**: The total time taken for a data packet to travel from source to destination.
+3. **Throughput**: Actual quantity of useful data successfully delivered per unit time.
+4. **Jitter (Packet Delay Variation)**: Statistical fluctuation/variation in packet arrival latency.
+   *(Critical Rule: Jitter is the most destructive parameter for **real-time voice (VoIP) and video streaming applications**, causing buffering, choppy speech, and audio stutter).*
+5. **BER (Bit Error Rate)**: Ratio of corrupted bits to total transmitted bits:
+   $$\text{BER} = \frac{\text{Number of Erroneous Bits Received}}{\text{Total Bits Transmitted}}$$
+
+---
+
+## 4. Mobile Cellular Communication & Multiple Access Methods
+- **Cellular Network Concept**: Geographical area is partitioned into hexagonal "cells", each served by a central base station (tower).
+- **Handoff / Handover**: The automatic mechanism of transferring an ongoing call or active data session from one base station tower to an adjacent cell as the mobile subscriber moves across boundaries without disconnecting the call.
+
+### Multiple Access Techniques Comparison:
+| Technique | Full Form | Resource Allocation Mechanism | Generation Used |
+|---|---|---|---|
+| **FDMA** | Frequency Division Multiple Access | Divides total frequency band into distinct, non-overlapping channels; each user gets dedicated frequency. | **1G** (Analog AMPS) |
+| **TDMA** | Time Division Multiple Access | Users share same frequency band but transmit in assigned, non-overlapping **time slots**. | **2G** (GSM) |
+| **CDMA** | Code Division Multiple Access | All users transmit simultaneously across entire frequency spectrum; separated by unique mathematical **orthogonal pseudorandom codes**. Capacity is interference-limited. | **3G** (UMTS / CDMA2000) |
+| **SDMA** | Space Division Multiple Access | Uses directional beamforming smart antennas to isolate users in physical space. | **4G / 5G** |
+| **OFDMA** | Orthogonal Frequency Division Multiple Access | Divides channel into hundreds of closely spaced orthogonal subcarriers. | **4G LTE / 5G / Wi-Fi 6** |
+| **NOMA** | Non-Orthogonal Multiple Access | Multiple users share identical time and frequency resources simultaneously by allocating **different power levels** (power-domain multiplexing with Successive Interference Cancellation). | **5G Advanced** |
+
+---
+
+## 5. Television & Broadcasting Systems
+1. **HDTV (High Definition Television)**: Digital broadcasting standard delivering $1080\text{p}$ ($1920 \times 1080$) resolution with 16:9 widescreen aspect ratio.
+2. **DTH (Direct-to-Home)**: Broadcast system transmitting digital signals directly from high-power geostationary communication satellites (Ku-Band) to home parabolic dish antennas equipped with **LNB (Low-Noise Block downconverter)**.
+3. **IPTV (Internet Protocol Television)**: Delivery of television programming and on-demand video over private managed IP packet networks (Airtel Xstream, JioFiber).
+4. **P2PTV (Peer-to-Peer Television)**: Distributes video streams over peer-to-peer overlay networks where viewers share bandwidth directly with other viewers, reducing central server load.
+5. **The "Cliff Effect" in Digital TV**: Unlike analog TV where signal degradation produces a gradual increase in static "snow", digital TV maintains pristine picture quality until signal strength falls below a threshold, upon which the picture abruptly vanishes or drops out completely.

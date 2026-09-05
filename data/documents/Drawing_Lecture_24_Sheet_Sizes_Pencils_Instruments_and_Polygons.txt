@@ -1,0 +1,61 @@
+# ESE / GATE Engineering Graphics & Design - Lecture 24: Sheet Sizes, Pencils, Instruments & Geometric Constructions
+By Haider Sir (PW)
+
+## 1. Standard Drawing Sheet Sizes (ISO A-Series)
+- **Aspect Ratio**: Width to length ratio is constantly $1 : \sqrt{2}$.
+- **Base Area**: Area of **A0 sheet = $1\text{ m}^2$**.
+- Each successive sheet size is obtained by halving the larger dimension of the preceding sheet.
+
+| Sheet Designation | Dimensions in mm ($L \times W$) | Area |
+|---|---|---|
+| **A0** | $1189 \times 841\text{ mm}$ | $1.0\text{ m}^2$ |
+| **A1** | $841 \times 594\text{ mm}$ | $0.5\text{ m}^2$ |
+| **A2** | $594 \times 420\text{ mm}$ | $0.25\text{ m}^2$ |
+| **A3** | $420 \times 297\text{ mm}$ | $0.125\text{ m}^2$ |
+| **A4** | $297 \times 210\text{ mm}$ | $0.0625\text{ m}^2$ |
+| **A5** | $210 \times 148\text{ mm}$ | $0.03125\text{ m}^2$ |
+| **A8** | $74 \times 52\text{ mm}$ | - |
+
+---
+
+## 2. Drawing Pencils: Grades, Ingredients & Sequence
+### Pencil Hardness vs Softness Spectrum:
+- Total 18 standard grades:
+  $$9B \leftarrow 8B \dots 3B \leftarrow 2B \leftarrow B \leftarrow HB \leftarrow F \rightarrow H \rightarrow 2H \rightarrow 3H \dots 8H \rightarrow 9H$$
+- **B (Blackness / Softness)**: Darkest, softest grade = **9B**.
+- **H (Hardness / Lightest)**: Hardest, lightest grade = **9H**.
+- **HB**: Medium soft / general purpose.
+- **F**: Fine / Firm grade (positioned between HB and H).
+- **Correct Hardness Progression**: $\dots 2B < B < HB < F < H < 2H < 3H \dots 9H$.
+
+### Ingredients of Pencil Lead:
+1. **Graphite** (provides blackness/marking ability)
+2. **Clay** (provides hardness and binding structure; more clay = harder pencil)
+3. **Wax** (acts as lubricant for smooth glide)
+4. Surrounding casing: **Wood** and exterior **Paint**.
+
+---
+
+## 3. Drawing Instruments & Set Squares
+- **Standard Instruments**: Mini Drafter, Roller Scale, T-Square, Protractor (D), Engineering Compass, Divider, French Curves, Inking Pen, Eraser, Sharpener, Sand Paper.
+- **Set Squares**:
+  1. $45^\circ - 45^\circ$ Set Square (angles: $45^\circ, 45^\circ, 90^\circ$)
+  2. $30^\circ - 60^\circ$ Set Square (angles: $30^\circ, 60^\circ, 90^\circ$)
+- **Combinations of Set Squares**:
+  - By combining $45^\circ - 45^\circ$ and $30^\circ - 60^\circ$ set squares, any angle in **increments of $15^\circ$** can be constructed ($15^\circ, 30^\circ, 45^\circ, 60^\circ, 75^\circ, 90^\circ, 105^\circ, 120^\circ, 135^\circ, 150^\circ, 165^\circ, 180^\circ$).
+
+---
+
+## 4. Construction of Regular Polygons & Geometry
+- Let $n$ = number of sides of a regular polygon:
+  - **Sum of all exterior angles** = $360^\circ$
+  - **One exterior angle ($E$)** = $\frac{360^\circ}{n}$
+  - **Sum of all interior angles** = $(n - 2) \times 180^\circ$
+  - **One interior angle ($I$)** = $\frac{(n - 2) \times 180^\circ}{n} = 180^\circ - E = 180^\circ - \frac{360^\circ}{n}$
+
+### Example Calculations:
+- **Equilateral Triangle ($n=3$)**: $E = 120^\circ$, $I = 60^\circ$.
+- **Square ($n=4$)**: $E = 90^\circ$, $I = 90^\circ$.
+- **Regular Pentagon ($n=5$)**: $E = \frac{360}{5} = 72^\circ$, $I = 180^\circ - 72^\circ = 108^\circ$.
+- **Regular Hexagon ($n=6$)**: $E = \frac{360}{6} = 60^\circ$, $I = 120^\circ$.
+- **Regular Octagon ($n=8$)**: $E = \frac{360}{8} = 45^\circ$, $I = 135^\circ$.

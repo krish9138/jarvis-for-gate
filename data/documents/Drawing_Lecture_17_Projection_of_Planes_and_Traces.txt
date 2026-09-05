@@ -1,0 +1,82 @@
+# ESE / GATE Engineering Graphics & Design - Lecture 17: Projection of Planes & Traces of Planes
+By Haider Sir (PW)
+
+## 1. Classification & Conditions of Plane Figures
+A plane figure (lamina) has length and breadth but negligible thickness.
+
+### Standard Orientation Conditions:
+1. **Condition 1: Plane Parallel to H.P. and Perpendicular to V.P.**:
+   - **Top View (TV)**: Gives the **True Shape and Size**.
+   - **Front View (FV)**: Appears as a **horizontal straight line** parallel to reference line XY.
+   - **Traces**: Has **only Vertical Trace (V.T.)** which is parallel to XY; has **NO Horizontal Trace (H.T.)**.
+
+2. **Condition 2: Plane Parallel to V.P. and Perpendicular to H.P.**:
+   - **Front View (FV)**: Gives the **True Shape and Size**.
+   - **Top View (TV)**: Appears as a **horizontal/straight line** parallel to XY.
+   - **Traces**: Has **only Horizontal Trace (H.T.)** which is parallel to XY; has **NO Vertical Trace (V.T.)**.
+
+3. **Condition 3: Plane Inclined to H.P. ($\theta$) and Perpendicular to V.P.**:
+   - Drawn in **2 Stages**:
+     - *Stage 1*: Assume plane parallel to HP $\rightarrow$ draw True Shape in TV.
+     - *Stage 2*: Tilt the line view in FV by angle $\theta$ to XY $\rightarrow$ project apparent/reduced shape in TV.
+   - **Front View (FV)**: Appears as an **inclined straight line** making angle $\theta$ with XY.
+   - **Top View (TV)**: Appears as a **foreshortened / reduced shape**.
+   - **Traces**:
+     - **V.T.** is an inclined line making angle $\theta$ with XY.
+     - **H.T.** is a line **perpendicular to XY**.
+
+4. **Condition 4: Plane Inclined to V.P. ($\phi$) and Perpendicular to H.P.**:
+   - Drawn in **2 Stages**:
+     - *Stage 1*: Assume plane parallel to VP $\rightarrow$ draw True Shape in FV.
+     - *Stage 2*: Tilt the line view in TV by angle $\phi$ to XY $\rightarrow$ project apparent shape in FV.
+   - **Top View (TV)**: Appears as an **inclined straight line** making angle $\phi$ with XY.
+   - **Front View (FV)**: Appears as a **foreshortened / reduced shape**.
+   - **Traces**:
+     - **H.T.** is an inclined line making angle $\phi$ with XY.
+     - **V.T.** is a line **perpendicular to XY**.
+
+5. **Condition 5: Oblique Plane (Plane Inclined to BOTH H.P. and V.P.)**:
+   - Cannot show true shape in regular orthographic views without auxiliary projection.
+   - Drawn in **3 Stages** (Initial position $\rightarrow$ 1st tilt $\rightarrow$ 2nd tilt).
+   - Both FV and TV appear as **foreshortened / distorted shapes** with reduced dimensions.
+
+6. **Condition 6: Plane Perpendicular to BOTH H.P. and V.P. (Profile Plane)**:
+   - **Front View (FV)**: Appears as a **vertical straight line** perpendicular to XY.
+   - **Top View (TV)**: Appears as a **vertical straight line** perpendicular to XY.
+   - **Side View (Profile View)**: Shows the **True Shape and Size**.
+   - **Traces**: Both H.T. and V.T. are straight lines **perpendicular to XY** and lie in the same vertical line (they do not intersect XY at an angle).
+
+---
+
+## 2. Key High-Yield Principles for Exams
+- **True Shape Visibility Rule**: The true shape of a plane is visible **only in the view taken perpendicular to that plane**. If a plane is perpendicular to a reference plane, its projection on that plane is a **straight line**, NEVER its true shape.
+- **Circle Projection**:
+  - Circle inclined to HP $\rightarrow$ Top view is an **Ellipse**; Front view is an inclined straight line.
+  - Circle inclined to VP $\rightarrow$ Front view is an **Ellipse**; Top view is an inclined straight line.
+- **Rectangle Projection**:
+  - Thin rectangular plate ($60 \times 30\text{ mm}$) inclined to HP such that its top view is a **square of maximum possible side ($30 \times 30\text{ mm}$)**.
+  - The $60\text{ mm}$ side is foreshortened to $30\text{ mm}$ ($\cos\theta = \frac{30}{60} = 0.5 \implies \theta = 60^\circ$).
+
+---
+
+## 3. Lecture 17 - Practice MCQs & Answer Key
+1. **Q1**: Oblique planes definition -> **(c) Planes inclined to both the reference planes**.
+2. **Q2**: Plane perpendicular to both reference planes visible clearly only if watched from -> **(c) Side view**.
+3. **Q3**: Plane parallel to HP, true drawing seen in -> **(a) Top view**.
+4. **Q4**: Square at $30^\circ$ to HP and turned $30^\circ$ to VP, top view is -> **(c) Rectangle** (or parallelogram depending on edge/diagonal alignment).
+5. **Q5**: Square at $30^\circ$ to HP and turned $30^\circ$ to VP, front view is -> **(d) Parallelogram**.
+6. **Q6**: Triangle perpendicular to both reference planes -> **(c) Front view - line, Top view - line**.
+7. **Q7**: Plane parallel to VP, which statement is false -> **(d) Top view gives true shape and size** (Top view is a line; FV gives true shape).
+8. **Q8**: Plane perpendicular to a reference plane shows true shape on that plane -> **(b) False** (Shows a line).
+9. **Q9**: Traces of plane do not intersect at XY reference line -> **(c) Perpendicular to both reference planes**.
+10. **Q10**: Plane $\perp$ to one plane and inclined to other obtained in 2 stages -> **(a) True**.
+11. **Q11**: Square $\perp$ to VP and inclined to HP traces -> **(c) H.T. perpendicular to XY, V.T. inclined to XY**.
+12. **Q12**: Plane $\perp$ to VP and inclined to HP at $30^\circ$, VT makes -> **(a) 30 degrees with XY**.
+13. **Q13**: Plane $\perp$ to VP and VT at $55^\circ$ to XY, which is false -> **(c) Top view gives true shape of plane**.
+14. **Q14**: Pentagon $\perp$ to HP and inclined to profile plane -> **(b) Front view - pentagon, Top view - line**.
+15. **Q15**: Hexagonal lamina inclined to HP and $\perp$ to VP, HT will be -> **(c) Line perpendicular to XY**.
+16. **Q16**: Circular plate appears as ellipse in front view $\rightarrow$ surface inclined to -> **(b) VP**.
+17. **Q17**: Rectangular plate ($60\times 30$) seen as square in top view $\rightarrow$ surface inclined to -> **(a) HP**.
+18. **Q18**: Plane $\perp$ to both planes, true shape seen on -> **(c) Side view**.
+19. **Q19**: Front view and top view both lines $\rightarrow$ plane is -> **(c) Perpendicular to HP and VP both**.
+20. **Q20**: Square lamina resting on corner on ground with diagonal $\perp$ to VP $\rightarrow$ top view will be -> **(b) Rhombus** (or reduced shape).

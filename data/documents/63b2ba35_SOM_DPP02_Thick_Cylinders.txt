@@ -1,0 +1,65 @@
+# GATE Mechanical Engineering: Strength of Materials
+## Module: Thick Cylinders & Lame's Equations — DPP-02 Detailed Notes & Solutions
+
+### 1. Theory & Governing Equations for Thick Cylinders
+A cylinder is termed "thick" when $t / d_i > 1/20$. In thick cylinders, the radial stress $\sigma_r$ cannot be neglected and varies significantly along the thickness from inner radius $R_i$ to outer radius $R_o$. Hoop stress $\sigma_c$ is also non-uniform and is maximum at the inner surface.
+
+#### Lame's Equations:
+For an isotropic elastic cylinder subjected to internal pressure $p_i$ and external pressure $p_o$:
+1. **Radial Stress ($\sigma_r$):**
+   $$\sigma_r = \frac{B}{r^2} - A$$
+   *(Sign convention: $\sigma_r$ is compressive; at inner radius $r = R_i$, $\sigma_r = p_i$; at outer radius $r = R_o$, $\sigma_r = p_o$)*
+
+2. **Circumferential / Hoop Stress ($\sigma_c$):**
+   $$\sigma_c = \frac{B}{r^2} + A$$
+   *(Nature: Tensile when internal pressure dominates, maximum at inner radius $r = R_i$)*
+
+3. **Maximum Shear Stress at any radius $r$ ($\tau_{max}$):**
+   $$\tau_{max} = \frac{\sigma_c - (-\sigma_r)}{2} = \frac{\sigma_c + \sigma_r}{2} = \frac{B}{r^2}$$
+   - The absolute maximum shear stress always occurs at the inner radius $r = R_i$:
+     $$\tau_{max, inner} = \frac{B}{R_i^2}$$
+
+4. **Longitudinal Stress ($\sigma_L$ for closed ends):**
+   $$\sigma_L = \frac{p_i R_i^2 - p_o R_o^2}{R_o^2 - R_i^2} = \text{Constant across cross-section}$$
+
+---
+
+### 2. DPP-02 Solved Numerical Questions
+
+#### Q1: Thick Cylinder under Internal (160 MPa) & External (80 MPa) Pressure
+- Given: $D_i = 150\text{ mm} \implies R_i = 75\text{ mm}$, $D_o = 450\text{ mm} \implies R_o = 225\text{ mm}$.
+- Boundary Pressures: $p_i = 160\text{ MPa}$, $p_o = 80\text{ MPa}$.
+- Equilibrium of longitudinal forces:
+  $$\Sigma F_x = 0 \implies p_o \pi R_o^2 - p_i \pi R_i^2 + \sigma_L \pi (R_o^2 - R_i^2) = 0$$
+  $$\sigma_L = \frac{p_i R_i^2 - p_o R_o^2}{R_o^2 - R_i^2} = \frac{160 \times 75^2 - 80 \times 225^2}{225^2 - 75^2} = \frac{900000 - 4050000}{50625 - 5625} = \frac{-3150000}{45000} = -70\text{ MPa}$$
+- Magnitude of longitudinal stress = **70 MPa** (Compressive).
+
+#### Q2: Thick-Walled Pipe Maximum Shear Stress
+- Given: $D_i = 500\text{ mm} \implies R_i = 250\text{ mm}$, thickness $t = 100\text{ mm} \implies R_o = 350\text{ mm}$, $p_i = 10\text{ MPa}$, $p_o = 0$.
+- Boundary conditions:
+  - At $r = 350\text{ mm}$, $\sigma_r = 0 \implies \frac{B}{350^2} - A = 0 \implies A = \frac{B}{350^2}$.
+  - At $r = 250\text{ mm}$, $\sigma_r = 10 \implies \frac{B}{250^2} - \frac{B}{350^2} = 10 \implies B\left(\frac{350^2 - 250^2}{250^2 \times 350^2}\right) = 10 \implies B = 1276041.667\text{ MPa}\cdot\text{mm}^2$.
+- Lame constant $A = \frac{1276041.667}{350^2} = 10.4167\text{ MPa}$.
+- Circumferential stress at inner radius:
+  $$\sigma_{ci} = \frac{B}{R_i^2} + A = \frac{1276041.667}{250^2} + 10.4167 = 20.4167 + 10.4167 = 30.833\text{ MPa}$$
+- Maximum shear stress:
+  $$\tau_{max} = \frac{\sigma_{ci} - (-\sigma_{ri})}{2} = \frac{30.833 - (-10)}{2} = \frac{40.833}{2} = 20.4165\text{ MPa}$$
+- Answer: **20.42 MPa** (Range: 19.86 ~ 20.98).
+
+#### Q3: Required Cylinder Thickness for Normal Stress Limit
+- Given: $D_i = 160\text{ mm} \implies R_i = 80\text{ mm}$, $p_i = 8\text{ MPa}$, $p_o = 0$, Maximum allowable tensile stress $\sigma_{max} = \sigma_{ci} \le 35\text{ MPa}$.
+- Maximum hoop stress formula for internal pressure only:
+  $$\sigma_{ci} = p_i \left(\frac{R_o^2 + R_i^2}{R_o^2 - R_i^2}\right) \le 35$$
+  $$8 \times (R_o^2 + 80^2) = 35 \times (R_o^2 - 80^2) \implies 8 R_o^2 + 51200 = 35 R_o^2 - 224000 \implies 27 R_o^2 = 275200 \implies R_o = 100.958\text{ mm}$$
+- Required thickness $t = R_o - R_i = 100.958 - 80 = 20.958\text{ mm} \approx 20.96\text{ mm}$.
+- Answer: **20.96 mm** (Range: 20.42 ~ 21.66).
+
+#### Q4: Circumferential Stress at Inner Surface under Internal (10 MPa) & External (4 MPa) Pressure
+- Given: $D_i = 300\text{ mm} \implies R_i = 150\text{ mm}$, $D_o = 500\text{ mm} \implies R_o = 250\text{ mm}$.
+- At $r = 150$, $\sigma_r = 10 \implies \frac{B}{150^2} - A = 10$.
+- At $r = 250$, $\sigma_r = 4 \implies \frac{B}{250^2} - A = 4$.
+- Subtracting gives: $B\left(\frac{1}{150^2} - \frac{1}{250^2}\right) = 6 \implies B = 210937.5\text{ MPa}\cdot\text{mm}^2$.
+- $A = \frac{B}{150^2} - 10 = \frac{210937.5}{22500} - 10 = 9.375 - 10 = -0.625\text{ MPa}$.
+- Hoop stress at inner radius:
+  $$\sigma_{ci} = \frac{B}{R_i^2} + A = \frac{210937.5}{150^2} + (-0.625) = 9.375 - 0.625 = 8.75\text{ MPa}$$
+- Answer: **8.75 MPa** (Range: 8.45 ~ 9.12).

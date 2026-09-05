@@ -1,0 +1,52 @@
+# GATE Mechanical Engineering: Strength of Materials
+## Module: Columns & Struts (Euler Buckling Theory) — DPP-01 Detailed Notes & Solutions
+
+### 1. Fundamental Principles & Euler's Theory of Buckling
+Columns are structural members subjected to axial compressive loads. When slender columns fail, they buckle elastically before reaching the yield strength of the material.
+
+#### Euler's Critical Buckling Load ($P_{cr}$):
+$$P_{cr} = \frac{\pi^2 E I_{min}}{L_e^2}$$
+Where:
+- $E$ = Young's Modulus of elasticity ($N/mm^2$ or $Pa$)
+- $I_{min}$ = Minimum area moment of inertia of the cross-section ($mm^4$)
+- $L_e$ = Effective / Equivalent length of the column ($mm$)
+
+#### Effective Length ($L_e$) for Standard Boundary / End Conditions:
+1. **Both Ends Hinged / Pinned / Pin-Jointed:**
+   $$L_e = L \implies P_{cr} = \frac{\pi^2 E I}{L^2}$$
+2. **Both Ends Fixed / Built-in:**
+   $$L_e = \frac{L}{2} = 0.5L \implies P_{cr} = \frac{4\pi^2 E I}{L^2}$$
+3. **One End Fixed, One End Free (Cantilever Column):**
+   $$L_e = 2L \implies P_{cr} = \frac{\pi^2 E I}{4L^2}$$
+4. **One End Fixed, One End Pinned / Hinged:**
+   $$L_e = \frac{L}{\sqrt{2}} \approx 0.707L \implies P_{cr} = \frac{2\pi^2 E I}{L^2}$$
+
+#### Slenderness Ratio ($\lambda$):
+$$\lambda = \frac{L_e}{k_{min}}$$
+Where radius of gyration $k = \sqrt{\frac{I_{min}}{A}}$.
+- Buckling stress: $\sigma_{cr} = \frac{P_{cr}}{A} = \frac{\pi^2 E}{\lambda^2}$.
+
+---
+
+### 2. DPP-01 Solved Questions
+
+#### Q1: Slenderness Ratio of Rectangular Column
+- Given: Cross section $20\text{ mm} \times 30\text{ mm}$, length $L = 10\text{ m} = 10000\text{ mm}$, both ends hinged ($L_e = L = 10000\text{ mm}$).
+- Area $A = 20 \times 30 = 600\text{ mm}^2$.
+- Minimum moment of inertia $I_{min} = \frac{30 \times 20^3}{12} = 20000\text{ mm}^4$.
+- Radius of gyration $k_{min} = \sqrt{\frac{I_{min}}{A}} = \sqrt{\frac{20000}{600}} = \sqrt{33.333} = 5.7735\text{ mm}$.
+- Slenderness ratio: $\lambda = \frac{10000}{5.7735} = 1732.05 \approx 1732.1$.
+- Answer: **1732.1** (Range: 1730.1 ~ 1734.1).
+
+#### Q2: Euler's Critical Load for Fixed-Fixed Square Column
+- Given: $L = 5\text{ m} = 5000\text{ mm}$, Square side $a = 30\text{ mm}$, $E = 100\text{ GPa} = 100 \times 10^3\text{ N/mm}^2$, Both ends fixed ($L_e = 0.5L = 2500\text{ mm}$).
+- $I = \frac{a^4}{12} = \frac{30^4}{12} = \frac{810000}{12} = 67500\text{ mm}^4$.
+- $P_{cr} = \frac{\pi^2 E I}{L_e^2} = \frac{\pi^2 \times 100000 \times 67500}{2500^2} = \frac{6.6616 \times 10^{10}}{6250000} = 10658.7\text{ N} \approx 10.66\text{ kN}$.
+- Answer: **10.66 kN** (Range: 10.33 ~ 10.99).
+
+#### Q5: Bonded vs Unbonded Layered Planks Column
+- For 3 planks of thickness $d/3$ and width $b$:
+  - When perfectly bonded (composite beam): $I = \frac{b d^3}{12}$.
+  - When unbonded (frictionless sliding between planks): $I_0 = 3 \times \left[\frac{b (d/3)^3}{12}\right] = 3 \times \frac{b d^3}{27 \times 12} = \frac{I}{9}$.
+  - Ratio of critical loads: $\frac{P}{P_0} = \frac{I}{I_0} = 9.00$.
+- Answer: **9.00** (Range: 8.91 ~ 9.11).

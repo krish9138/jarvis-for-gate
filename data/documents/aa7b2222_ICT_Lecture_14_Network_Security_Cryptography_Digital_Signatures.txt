@@ -1,0 +1,104 @@
+# ESE / GATE ICT - Lecture 14: Network Security Foundations & Cryptography
+By Haider Sir (PW)
+
+## 1. Foundations of Network Security
+### The Four Pillars of Security (CIA + Non-Repudiation)
+1. **Confidentiality**: Ensures information is not made available or disclosed to unauthorized individuals, entities, or processes (achieved via Encryption).
+2. **Integrity**: Maintains consistency, accuracy, and trustworthiness of data throughout its lifecycle; prevents unauthorized modification or undetected tampering (achieved via Hash functions and Digital Signatures).
+3. **Authentication**: Verifies the identity of a user, system, or process before granting access to resources (passwords, biometrics, certificates).
+4. **Non-Repudiation**: Provides undeniable proof of origin and delivery, ensuring that a sender or signer cannot deny having sent/created a message or transaction (achieved via Digital Signatures).
+
+---
+
+## 2. Cryptography vs Steganography
+- **Cryptography**: Encrypts the content of a message to make it unreadable/scrambled ciphertext (`Plaintext + Key -> Ciphertext -> Decryption -> Plaintext`). The existence of the secret message is visible/evident, but its content is concealed.
+- **Steganography** ("Covered Writing"): Conceals the very existence of a secret message, file, or data inside another innocuous medium (e.g., hiding text bits in image pixels or audio noise). The message is invisible to casual observers.
+
+---
+
+## 3. Symmetric vs Asymmetric Key Cryptography
+| Feature | Symmetric Key Cryptography | Asymmetric (Public-Key) Cryptography |
+|---|---|---|
+| **Keys Used** | Single, shared secret key for both encryption and decryption | Key Pair: **Public Key** (shared openly for encryption/verification) + **Private Key** (kept strictly secret for decryption/signing) |
+| **Speed & Computation** | Very fast, highly computationally efficient; ideal for bulk data transfer | Slower, computationally intensive; mathematically heavy |
+| **Key Distribution** | Difficult (the "Key Exchange Problem" - how to securely share the secret key) | Solves key distribution problem; public keys can be distributed over insecure channels |
+| **Key Use Cases** | Bulk data encryption (AES, DES) | Key exchange (Diffie-Hellman, RSA), Digital Signatures |
+
+### Symmetric Key Cipher Types
+1. **Block Ciphers**: Encrypts fixed-size blocks of plaintext at a time (e.g., 64-bit, 128-bit blocks). Used in PGP, SSL/TLS, IPsec.
+   - **DES (Data Encryption Standard)**: 56-bit key size, 64-bit block size. *Status: Insecure* (vulnerable to brute-force).
+   - **AES (Advanced Encryption Standard)**: 128, 192, or 256-bit key size, 128-bit block size. *Status: Highly Secure* (Global standard).
+   - **IDEA (International Data Encryption Algorithm)**: 128-bit key size, 64-bit block size. Used in PGP. *Status: Secure*.
+2. **Stream Ciphers**: Encrypts plaintext bit-by-bit or byte-by-byte in real-time by XORing with a pseudorandom keystream (e.g., **RC4**, **ChaCha20**).
+
+---
+
+## 4. RSA Algorithm & Asymmetric Cryptography
+- **RSA (Rivest-Shamir-Adleman)**: Most widely used asymmetric algorithm.
+- **Mathematical Security Foundation**: Computational hardness of **factoring large prime numbers** (given product $n = p \times q$, finding $p$ and $q$ is computationally infeasible for large integers).
+- **Primary Roles**:
+  1. **Secure Key Exchange**: Encrypting and transmitting a symmetric session key across an insecure channel.
+  2. **Digital Signatures**: Creating tamper-evident digital signatures.
+
+---
+
+## 5. Quantum Cryptography & QKD
+- **Core Principle**: Leverages laws of **Quantum Mechanics** (Heisenberg's Uncertainty Principle and Quantum No-Cloning Theorem) rather than mathematical complexity.
+- **Mechanism**: The act of measuring/intercepting a quantum particle (e.g., polarized photon) inherently alters its quantum state, immediately exposing the eavesdropper.
+- **QKD (Quantum Key Distribution)**: Generates and shares an unbreakable secret key between parties (e.g. Alice and Bob), which is then used with symmetric encryption (like AES) for data.
+- **Significance**: Provides "quantum-proof" communication secure against future quantum computers running Shor's factoring algorithm.
+
+---
+
+## 6. Digital Signatures: Mechanism & Verification
+### How Digital Signatures Work:
+1. **Sender's Side**:
+   - Sender passes original message through a **Cryptographic Hash Function** (e.g., SHA-256) to produce a fixed-length **Message Digest / Hash**.
+   - Sender encrypts this hash using their **Private Key** $\rightarrow$ produces the **Digital Signature**.
+   - Message + Digital Signature are transmitted to the receiver.
+2. **Receiver's Side**:
+   - Receiver decrypts the signature using the **Sender's Public Key** to extract the decrypted hash.
+   - Receiver independently calculates the hash of the received message.
+   - **Comparison**: If both hashes match $\rightarrow$ Authenticity and Integrity verified!
+
+### Core Benefits of Digital Signatures:
+- **Authentication**: Confirms sender identity (only sender possessed the private key).
+- **Integrity**: Proves message was not altered or corrupted in transit.
+- **Non-Repudiation**: Sender cannot legally or technically deny sending the message.
+- *(Note: Digital Signature alone does NOT provide Confidentiality unless the message payload is also encrypted).*
+
+---
+
+## 7. Network Security Technologies: IPsec & Firewalls
+### IPsec (IP Security)
+- Operates at **Network Layer (Layer 3)** of OSI model.
+- **Key Protocols**:
+  - **AH (Authentication Header)**: Provides integrity and authentication (no encryption).
+  - **ESP (Encapsulating Security Payload)**: Provides confidentiality (encryption), data integrity, and authentication.
+- **Operation Modes**:
+  - **Transport Mode**: Encrypts only the IP payload (data); original IP header remains intact. Used for host-to-host communications.
+  - **Tunnel Mode**: Encrypts the entire IP packet (payload + original header) and adds a new IP header. Widely used for Site-to-Site VPNs.
+
+### Firewalls
+- Network security devices/software that inspect and filter traffic based on security policies.
+- Types: Packet-Filtering, Stateful Inspection, Proxy Firewalls, Next-Generation Firewalls (NGFW).
+- Operates as a barrier between trusted internal networks and untrusted external networks.
+
+---
+
+## 8. Lecture 14 - Practice MCQs & Answer Keys
+1. **Q1**: Cloud service model for developers wanting full application control without managing OS/servers -> **Answer: PaaS (Option c)**
+2. **Q2**: Core technology enabling single physical server to be partitioned into multiple VMs -> **Answer: Server Virtualization (Option c)**
+3. **Q3**: Project Loon balloon layer -> **Answer: Stratosphere (Option b)**
+4. **Q4**: Pay-per-use cloud model direct characteristic -> **Answer: Measured Service (Option d)**
+5. **Q5**: Cloud shared by university, research lab, and government agency -> **Answer: Community Cloud (Option d)**
+6. **Q6**: Statements regarding Li-Fi and White-Fi -> **Answer: 3 and 4 only (Option b)** (Li-Fi modulates light; White-Fi uses TV white spaces).
+7. **Q7**: Essential characteristics of cloud computing -> **Answer: 1 and 3 only (Option a)** (Resource pooling; Rapid elasticity).
+8. **Q8**: Cloud service models statements -> **Answer: 1 and 3 only (Option a)** (In IaaS consumer manages OS/runtime; PaaS platform for developers).
+9. **Q9**: Back-end of cloud architecture -> **Answer: 2, 3 and 4 only (Option b)** (Servers/storage, virtualization, redundancy).
+10. **Q10**: Hybrid cloud advantages -> **Answer: 2 and 3 only (Option b)** (Cost-effective public cloud + secure private cloud).
+11. **Q11 (Assertion-Reason)**: A: IoT enables data transfer without human interaction. R: Every IoT device has unique identifier -> **Answer: Both A and R are true and R is the correct explanation of A (Option a)**
+12. **Q12 (Assertion-Reason)**: A: Private cloud provides greater control/security. R: In SaaS users access via web browser -> **Answer: Both A and R are true but R is NOT the correct explanation of A (Option b)**
+13. **Q13 (Assertion-Reason)**: A: Li-Fi uses RF signals (False, uses light). R: Harald Haas coined Li-Fi for light-based communication (True) -> **Answer: A is false but R is true (Option d)**
+14. **Q14 (Assertion-Reason)**: A: Rapid elasticity quickly scales resources (True). R: Measured service allows pooling (False, resource pooling is resource pooling) -> **Answer: A is true but R is false (Option c)**
+15. **Q15 (Assertion-Reason)**: A: Server virtualization key enabler. R: Allows single server to run multiple VMs -> **Answer: Both A and R are true and R is the correct explanation of A (Option a)**

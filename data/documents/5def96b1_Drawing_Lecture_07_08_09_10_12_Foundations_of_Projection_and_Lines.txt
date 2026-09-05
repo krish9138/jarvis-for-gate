@@ -1,0 +1,98 @@
+# ESE / GATE Engineering Graphics & Design - Lectures 07, 08, 09, 10 & 12: Foundations of Projections, 6-View Layout & Line Conditions
+By Haider Sir (PW)
+
+## 1. Comprehensive Taxonomy & Tree of Projections
+Projection literally means "to throw forward onto a plane".
+
+```
+PROJECTION
+├── PARALLEL PROJECTION (Projectors are parallel to each other)
+│   ├── OBLIQUE PROJECTION (Projectors parallel to each other & inclined to Plane of Projection)
+│   │   ├── Cabinet Projection (Receding lines at half-scale: 0.5)
+│   │   ├── Cavalier Projection (Receding lines at full-scale: 1:1)
+│   │   ├── Clinographic Projection
+│   │   └── Shades and Shadows
+│   └── ORTHOGRAPHIC PROJECTION (Projectors parallel to each other & PERPENDICULAR to Plane of Projection)
+│       ├── Multi-View Projection (Multiple 2D views of 3D object on principal planes)
+│       │   ├── First Angle Projection (Standard in BIS & ISO)
+│       │   ├── Second Angle Projection (Non-working / Overlapping)
+│       │   ├── Third Angle Projection (Standard in USA / ANSI)
+│       │   └── Fourth Angle Projection (Non-working / Overlapping)
+│       └── Axonometric Projection (Single 3D pictorial view with inclined axes)
+│           ├── Isometric Projection (All 3 axes equally inclined at 120°, 1 scale)
+│           ├── Dimetric Projection (2 axes equally inclined, 2 scales)
+│           └── Trimetric Projection (All 3 axes unequally inclined, 3 scales)
+└── PERSPECTIVE / CENTRAL PROJECTION (Projectors converge at a single point / Station Point / Eye - "Photographic View")
+    ├── Linear Perspective
+    │   ├── One-Point Perspective (Parallel perspective)
+    │   ├── Two-Point Perspective (Angular perspective)
+    │   └── Three-Point Perspective (Oblique perspective)
+    └── Aerial Perspective
+```
+
+---
+
+## 2. Standard Lettering Conventions in Technical Drawing
+- **Actual Object in 3D Space**: Represented by **Capital Letters** ($A, B, C, P, Q$).
+- **Front View (Elevation)**: Represented on V.P. by **small letters with a single dash** ($a', b', c', p'$).
+- **Top View (Plan)**: Represented on H.P. by **small letters without a dash** ($a, b, c, p$).
+- **Side View (Profile / End View)**: Represented on P.P. by **small letters with a double dash** ($a'', b'', c'', p''$).
+
+---
+
+## 3. Glass Box View Unfolding: First Angle vs Third Angle
+When the imaginary transparent glass projection box is unfolded onto flat paper:
+
+### First Angle Projection (Observer $\rightarrow$ Object $\rightarrow$ Plane of Projection):
+- **Front View (FV)**: In the center.
+- **Top View (TV)**: Drawn **BELOW** the Front View.
+- **Bottom View**: Drawn **ABOVE** the Front View.
+- **Right Hand Side View (R.H.S.V.)**: Drawn on the **LEFT** of the Front View.
+- **Left Hand Side View (L.H.S.V.)**: Drawn on the **RIGHT** of the Front View.
+- **Rear / Back View**: Drawn to the extreme right of the layout.
+- *Symbol*: Frustum of a cone with its smaller base facing the projection circles to the right.
+
+### Third Angle Projection (Observer $\rightarrow$ Plane of Projection $\rightarrow$ Object):
+- **Front View (FV)**: In the center.
+- **Top View (TV)**: Drawn **ABOVE** the Front View.
+- **Bottom View**: Drawn **BELOW** the Front View.
+- **Right Hand Side View (R.H.S.V.)**: Drawn on the **RIGHT** of the Front View.
+- **Left Hand Side View (L.H.S.V.)**: Drawn on the **LEFT** of the Front View.
+
+---
+
+## 4. Why 2nd and 4th Angle Projections are Non-Working
+- When H.P. is rotated by $90^\circ$ clockwise:
+  - **In 2nd Quadrant**: Both H.P. and V.P. lie **ABOVE** the $xy$ line $\rightarrow$ the Top View (Plan) and Front View (Elevation) **overlap each other**, making drawings unreadable.
+  - **In 4th Quadrant**: Both H.P. and V.P. lie **BELOW** the $xy$ line $\rightarrow$ both views overlap below $xy$.
+- Therefore, **only 1st and 3rd angle projection methods are practical and usable**.
+
+---
+
+## 5. Projection of Straight Lines: 5 Fundamental Conditions (Lecture 12)
+1. **Condition 1: Line Parallel to BOTH H.P. and V.P.**:
+   - Both Front View ($a'b'$) and Top View ($ab$) are **horizontal lines parallel to $xy$**, showing **True Length ($TL$)**.
+   - No trace exists on either plane.
+2. **Condition 2: Line Perpendicular to H.P. & Parallel to V.P.**:
+   - Front View is a **vertical line $\perp xy$** showing True Length ($TL$).
+   - Top View is a **single point** ($a(b)$).
+   - Horizontal Trace (H.T.) coincides with the Top View point; no V.T.
+3. **Condition 3: Line Perpendicular to V.P. & Parallel to H.P.**:
+   - Top View is a **vertical line $\perp xy$** showing True Length ($TL$).
+   - Front View is a **single point** ($a'(b')$).
+   - Vertical Trace (V.T.) coincides with the Front View point; no H.T.
+4. **Condition 4: Line Inclined to H.P. ($\theta$) & Parallel to V.P.**:
+   - Front View shows **True Length ($TL$)** inclined at $\theta$ to $xy$.
+   - Top View is a horizontal line of length $= TL \cos\theta$ parallel to $xy$.
+   - Has only H.T. (no V.T.).
+5. **Condition 5: Line Inclined to V.P. ($\phi$) & Parallel to H.P.**:
+   - Top View shows **True Length ($TL$)** inclined at $\phi$ to $xy$.
+   - Front View is a horizontal line of length $= TL \cos\phi$ parallel to $xy$.
+   - Has only V.T. (no H.T.).
+
+### Important Solved Problem (Lecture 12):
+- A vertical line $AB$ of length $75\text{ mm}$ has end $A$ on HP and $12\text{ mm}$ in front of VP.
+- Another line $AC$ of length $100\text{ mm}$ is on HP and parallel to VP ($A$ is a common point).
+- Since $AB$ is vertical ($\perp$ HP) and $AC$ lies on HP, they are mutually perpendicular in 3D space ($\angle BAC = 90^\circ$).
+- Distance between $B$ and $C$ in space:
+  $$\text{Length } BC = \sqrt{AB^2 + AC^2} = \sqrt{75^2 + 100^2} = \sqrt{5625 + 10000} = \sqrt{15625} = 125\text{ mm}$$

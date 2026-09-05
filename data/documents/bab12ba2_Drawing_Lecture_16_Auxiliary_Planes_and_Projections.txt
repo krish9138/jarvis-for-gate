@@ -1,0 +1,42 @@
+# ESE / GATE Engineering Graphics & Design - Lecture 16: Auxiliary Planes & Advanced Projection of Planes
+By Haider Sir (PW)
+
+## 1. Why Auxiliary Planes?
+Whenever the primary 6 orthographic views (Front, Top, Both Sides, Bottom, Rear) are unable to reveal the **True Shape of an inclined or oblique surface**, an **Auxiliary Plane** is introduced.
+
+### 3 Types of Auxiliary Reference Planes:
+1. **Auxiliary Inclined Plane (A.I.P.)**:
+   - Inclined to the **Horizontal Plane (H.P.)** at angle $\theta$ and **Perpendicular to the Vertical Plane (V.P.)**.
+   - The view projected on an A.I.P. is called the **Auxiliary Top View (Aux. T.V.)**.
+   - Used to find the true shape of a surface inclined to H.P.
+   - *Distance Rule*: The distance of any point from the V.P. is seen as its **True Distance** on the A.I.P.
+
+2. **Auxiliary Vertical Plane (A.V.P.)**:
+   - Inclined to the **Vertical Plane (V.P.)** at angle $\phi$ and **Perpendicular to the Horizontal Plane (H.P.)**.
+   - The view projected on an A.V.P. is called the **Auxiliary Front View (Aux. F.V.)**.
+   - Used to find the true shape of a surface inclined to V.P.
+   - *Distance Rule*: The distance of any point from the H.P. is seen as its **True Distance** on the A.V.P.
+
+3. **Profile Plane (P.P.)**:
+   - **Perpendicular to BOTH reference planes (H.P. and V.P.)**.
+   - Yields the **Profile / Side View**.
+
+---
+
+## 2. Projection of Points on Auxiliary Planes
+- **On A.I.P.**:
+  - Let a point $P$ have height 20 mm above HP and depth 30 mm in front of VP.
+  - On the Auxiliary reference line $x_1 y_1$ (inclined to $xy$):
+    - The projector is drawn perpendicular to $x_1 y_1$ from the front view $p'$.
+    - The distance of point $p_1$ on A.I.P. from $x_1 y_1$ is **$30\text{ mm}$ (its true depth from VP)**.
+- **On A.V.P.**:
+  - Projector is drawn perpendicular to $x_1 y_1$ from the top view $p$.
+  - The distance of point $p_1'$ on A.V.P. from $x_1 y_1$ is **$20\text{ mm}$ (its true height from HP)**.
+
+---
+
+## 3. Fundamental Axioms of Plane Projections
+1. If a plane is **perpendicular to any reference plane**, its projection on that plane is **always a straight line**.
+2. If a plane is **parallel to any reference plane**, its **True Shape and Size** will be seen on that plane.
+3. If a plane is **inclined to any reference plane**, its projection on that plane is **always a reduced / foreshortened shape**.
+4. The **Trace of a plane** on any reference plane is always a **straight line** (never a point).

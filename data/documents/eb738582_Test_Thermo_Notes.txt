@@ -1,0 +1,5 @@
+# Thermodynamics First Law Notes
+For a closed system undergoing a cycle, net heat transfer equals net work done: �Q = �W.
+
+For a process: dQ = dU + dW.
+Internal energy U is a point function and extensive property.

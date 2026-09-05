@@ -1,0 +1,74 @@
+# ESE / GATE Engineering Graphics & Design - Lecture 23: Axonometric & Isometric Projections, Lines & Dimensioning
+By Haider Sir (PW)
+
+## 1. Axonometric Projections Hierarchy
+Axonometric projection is a type of parallel projection where the object is tilted relative to the projection plane so that all three principal axes (X, Y, Z) are visible in a single pictorial view.
+
+| Type | Equal Angles Between Axes | Foreshortening Scales Required |
+|---|---|---|
+| **Isometric Projection** | All 3 angles equal ($120^\circ, 120^\circ, 120^\circ$) | **1 single scale** (Isometric scale) |
+| **Dimetric Projection** | 2 angles equal, 1 different (e.g. $110^\circ, 110^\circ, 140^\circ$) | **2 distinct scales** |
+| **Trimetric Projection** | All 3 angles distinct (e.g. $110^\circ, 120^\circ, 130^\circ$) | **3 distinct scales** |
+
+---
+
+## 2. Isometric Projection vs Isometric View (Drawing)
+- **Isometric Line**: Any line parallel to the isometric axes.
+- **Non-Isometric Line**: Any line NOT parallel to the isometric axes (drawn via Box method or Offset/Coordinate method).
+- **Isometric Plane**: Any plane parallel to the planes of the isometric axes (faces of an isometric cube).
+- **Isometric Ratio / Scale (R.F.) Proof**:
+  - True length line inclined at $45^\circ$, isometric projection line inclined at $30^\circ$ to horizontal.
+  $$RF = \frac{\text{Isometric Length}}{\text{True Length}} = \frac{\cos 45^\circ}{\cos 30^\circ} = \frac{1/\sqrt{2}}{\sqrt{3}/2} = \frac{\sqrt{2}}{\sqrt{3}} \approx 0.8165 \approx \frac{9}{11}$$
+  $$\text{Isometric Length} = 0.816 \times \text{True Length}$$
+
+### Key Differences:
+| Parameter | Isometric Projection | Isometric View / Drawing |
+|---|---|---|
+| **Scale Used** | Drawn using **Isometric Scale** ($0.816 \times \text{True Length}$) | Drawn using **True / Full Scale** ($1.0 \times \text{True Length}$) |
+| **Visual Size** | Appears **Smaller** (foreshortened by approx. 18.4%) | Appears **Larger** than isometric projection |
+| **Circle Appearance** | Appears as an **Ellipse** (drawn preferably by **Four-Centre Method**) | Appears as an **Ellipse** |
+| **Square Appearance** | Appears as a **Rhombus** (with angles $60^\circ$ and $120^\circ$) | Appears as a **Rhombus** |
+| **Sphere Appearance** | Appears as a **Circle of diameter = True Diameter of Sphere** (because sphere radius is equidistant from center in all directions) | Appears as a **Circle of diameter = True Diameter** |
+
+---
+
+## 3. Engineering Drawing Line Types & Applications
+| Line Representation | Description / Type | Primary Applications |
+|---|---|---|
+| **Continuous Thick (Wide)** | Type A | Visible outlines, visible edges, crests of screw threads |
+| **Continuous Thin (Narrow)** | Type B | Dimension lines, extension lines, projection lines, leader lines, hatching lines, revolved sections, grid lines |
+| **Continuous Thin Freehand** | Type C | Limits of partial / interrupted views and sections (manual break) |
+| **Continuous Thin with Zigzags** | Type D | **Long-break line** (mechanical break) |
+| **Dashed Narrow / Thin** | Type E / F | Hidden outlines, hidden edges |
+| **Long-Dashed Dotted Thin (Chain)** | Type G | **Centre lines**, lines of symmetry, pitch circles of gears and holes |
+| **Long-Dashed Dotted Thick** | Type H | Indication of surfaces receiving special heat treatment |
+| **Chain Thin Double-Dashed** | Type K | **Outlines of adjacent parts**, extreme positions of movable parts, centroidal lines, parts before forming |
+
+### Drawing Priority Order When Lines Coincide:
+1. **Visible outlines and edges** (Highest Priority)
+2. **Hidden outlines and edges**
+3. **Cutting planes**
+4. **Centre lines and lines of symmetry**
+5. **Centroidal lines**
+6. **Projection lines** (Lowest Priority)
+
+---
+
+## 4. Dimensioning Principles & Terminology
+- **Dimension Value**: Numerical magnitude with units (placed above or breaking dimension line).
+- **Arrowhead Specifications**: Ratio of length to width/depth is strictly **$3:1$** (Standard: Length = 3 mm, Depth = 1 mm). Can be closed filled, closed blank, or open $30^\circ$ to $90^\circ$.
+
+### Dimensioning Systems:
+1. **Aligned System**:
+   - Dimension values are placed **parallel to and above** the dimension lines.
+   - Readable from the bottom or right-hand edge of the drawing sheet.
+2. **Unidirectional System**:
+   - Dimension values are oriented horizontally regardless of the angle of the dimension line.
+   - Dimension line is **broken at the center** to insert the value.
+   - Readable strictly from the **bottom of the drawing sheet**.
+
+### Arrangement of Dimensions:
+1. **Continuous / Chain Dimensioning**: Dimensions arranged in a continuous straight row.
+2. **Progressive / Parallel Dimensioning**: All dimensions originate from a single common baseline/datum.
+3. **Superimposed Running Dimensioning**: Simplified progressive dimensioning using a single dimension line with origin '0' and arrowheads at feature markers.
+4. **Coordinate Dimensioning**: Features tabulated in X, Y coordinate tables.

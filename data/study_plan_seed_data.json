@@ -1,0 +1,101 @@
+{
+  "_source_note": "Extracted from GATE_ME_MasterPlan_2026.pdf (uploaded). Use this to seed new tables: subject_weightage, monthly_planner, roadmap_milestones, skills_tracker, resources, weekly_timetable.",
+  "subject_weightage": [
+    {"subject": "Engineering Mathematics", "avg_marks": "13-15", "priority": "CRITICAL", "phase": "Jun-Jul", "difficulty": "Medium", "nptel_course": "NPTEL: Engineering Maths (IIT)"},
+    {"subject": "Strength of Materials", "avg_marks": "8-10", "priority": "HIGH", "phase": "Jun-Jul", "difficulty": "Medium-High", "nptel_course": "NPTEL: SOM - IIT Kharagpur"},
+    {"subject": "Thermodynamics", "avg_marks": "8-10", "priority": "HIGH", "phase": "Jun-Aug", "difficulty": "High", "nptel_course": "NPTEL: Engineering Thermodynamics"},
+    {"subject": "Manufacturing Science", "avg_marks": "8-10", "priority": "HIGH", "phase": "Jul-Aug", "difficulty": "Medium", "nptel_course": "NPTEL: Manufacturing Processes (NPTEL)"},
+    {"subject": "Fluid Mechanics", "avg_marks": "8-10", "priority": "HIGH", "phase": "Sep-Oct", "difficulty": "High", "nptel_course": "NPTEL: Fluid Mechanics (IIT Madras)"},
+    {"subject": "Heat Transfer", "avg_marks": "5-7", "priority": "MEDIUM", "phase": "Nov", "difficulty": "Medium", "nptel_course": "NPTEL: Heat Transfer (IIT Guwahati)"},
+    {"subject": "Theory of Machines", "avg_marks": "5-7", "priority": "MEDIUM", "phase": "Sep-Oct", "difficulty": "Medium", "nptel_course": "NPTEL: Theory of Machines"},
+    {"subject": "Machine Design", "avg_marks": "5-7", "priority": "MEDIUM", "phase": "Sep-Oct", "difficulty": "Medium", "nptel_course": "NPTEL: Machine Design (IIT Delhi)"},
+    {"subject": "Industrial Engineering", "avg_marks": "4-6", "priority": "STANDARD", "phase": "Nov", "difficulty": "Low-Medium", "nptel_course": "NPTEL: Industrial Engg & Mgmt"},
+    {"subject": "Engineering Mechanics", "avg_marks": "3-5", "priority": "STANDARD", "phase": "Aug", "difficulty": "Medium", "nptel_course": "NPTEL: Engineering Mechanics"},
+    {"subject": "General Aptitude", "avg_marks": "15", "priority": "PARALLEL", "phase": "All Months", "difficulty": "Low", "nptel_course": "Made Easy / Gradeup Aptitude Series"}
+  ],
+  "monthly_planner": [
+    {"month": "June 2025", "weekday_hrs_per_day": 3, "weekend_hrs_per_day": 7, "study_hrs_per_week": 29, "total_hrs_per_month": 124.7, "phase": "Foundation", "key_focus": "Maths, SOM Basics"},
+    {"month": "July 2025", "weekday_hrs_per_day": 3, "weekend_hrs_per_day": 7, "study_hrs_per_week": 29, "total_hrs_per_month": 124.7, "phase": "Foundation", "key_focus": "Thermodynamics, Manufacturing"},
+    {"month": "August 2025", "weekday_hrs_per_day": 3, "weekend_hrs_per_day": 7, "study_hrs_per_week": 29, "total_hrs_per_month": 154.8, "phase": "Foundation", "key_focus": "SOM Deep-Dive, Eng. Mechanics"},
+    {"month": "September 2025", "weekday_hrs_per_day": 3, "weekend_hrs_per_day": 7, "study_hrs_per_week": 36, "total_hrs_per_month": 154.8, "phase": "Application", "key_focus": "Fluid Mechanics, TOM"},
+    {"month": "October 2025", "weekday_hrs_per_day": 4, "weekend_hrs_per_day": 8, "study_hrs_per_week": 36, "total_hrs_per_month": 184.9, "phase": "Application", "key_focus": "Machine Design, Heat Transfer"},
+    {"month": "November 2025", "weekday_hrs_per_day": 4, "weekend_hrs_per_day": 8, "study_hrs_per_week": 43, "total_hrs_per_month": 184.9, "phase": "Revision", "key_focus": "IE, Full Syllabus Revision"},
+    {"month": "December 2025", "weekday_hrs_per_day": 5, "weekend_hrs_per_day": 9, "study_hrs_per_week": 43, "total_hrs_per_month": 190.0, "phase": "Simulation", "key_focus": "Mock Tests Series 1-4"},
+    {"month": "January 2026", "weekday_hrs_per_day": 5, "weekend_hrs_per_day": 9, "study_hrs_per_week": 45, "total_hrs_per_month": 200.0, "phase": "Simulation", "key_focus": "Mock Tests + Formula Blitz"}
+  ],
+  "total_estimated_study_hours": 928.8,
+  "exam_details": {"start_date": "2025-06-01", "exam_month": "2026-02", "total_marks": 100, "duration_months": 8},
+  "roadmap_milestones": [
+    {"month": "June 2025", "primary_subjects": ["Engineering Mathematics (Calculus, Linear Algebra, PDE)"], "secondary_subjects": ["SOM: Stress, Strain, Torsion, Beams"], "checklist": ["Complete Maths PYQs (2018-23)", "SOM formula sheet ready", "1 full mock (General Aptitude)", "Anki deck: 50 Maths formulas"]},
+    {"month": "July 2025", "primary_subjects": ["Thermodynamics (Laws, Cycles, Psychrometrics)"], "secondary_subjects": ["Manufacturing Science (Casting, Forming, Welding)"], "checklist": ["Thermo PYQs solved (2018-23)", "Manufacturing: all processes mapped", "2 subject-wise mock tests", "Formula sheets: Thermo + Mfg"]},
+    {"month": "August 2025", "primary_subjects": ["SOM Deep-Dive (Springs, Columns, Combined Loading)"], "secondary_subjects": ["Engineering Mechanics (Statics, Dynamics)"], "checklist": ["SOM: All PYQ topics covered", "Eng Mechanics notes done", "3 full mock tests attempted", "Weak topic list prepared"]},
+    {"month": "September 2025", "primary_subjects": ["Fluid Mechanics (Bernoulli, Pipe Flow, Turbomachinery)"], "secondary_subjects": ["Theory of Machines (Kinematics, Vibrations, Governors)"], "checklist": ["Fluid Mech PYQs (2018-23)", "TOM: Full chapter notes", "4 full mock tests (sections)", "Speed: 25 MCQs in 45 min"]},
+    {"month": "October 2025", "primary_subjects": ["Machine Design (Fatigue, Shafts, Gears, Bearings)"], "secondary_subjects": ["Heat Transfer (Conduction, Convection, Radiation)"], "checklist": ["Machine Design formula sheet", "Heat Transfer PYQs done", "5 full mock tests attempted", "Score target: >40/100 in mock"]},
+    {"month": "November 2025", "primary_subjects": ["Industrial Engineering (PERT/CPM, Queuing, Inventory)"], "secondary_subjects": ["Full Syllabus First-Pass Revision"], "checklist": ["IE topics completed", "Full syllabus revision (pass 1)", "6 full mock tests done", "Score target: >50/100 in mock"]},
+    {"month": "December 2025", "primary_subjects": ["Mock Test Series (Full-Length, 3 hr each)"], "secondary_subjects": ["Formula Memorisation & Error Analysis"], "checklist": ["8 full mock tests done", "Error log maintained", "Score target: >60/100", "Top 5 weak topics re-done"]},
+    {"month": "January 2026", "primary_subjects": ["Final Mock Tests + PYQ Marathon (2015-2024)"], "secondary_subjects": ["Rapid Revision & Formula Blitz"], "checklist": ["12+ mocks completed", "PYQ 10yr done twice", "Score target: >70/100", "Day-before strategy set"]}
+  ],
+  "skills_tracker": [
+    {"skill": "Python for Engineers", "months": "June-July", "weekly_hours": 4, "what_to_learn": "NumPy arrays, Matplotlib plots, SciPy ODE solvers, simple vibration simulator", "progress_pct": 35},
+    {"skill": "Python Advanced", "months": "August", "weekly_hours": 4, "what_to_learn": "Solving Bernoulli, plotting heat distributions, automating PYQ analysis", "progress_pct": 15},
+    {"skill": "Excel for Engineers", "months": "August-September", "weekly_hours": 4, "what_to_learn": "Pivot tables, Solver add-in, data charts, engineering data analysis dashboards", "progress_pct": 40},
+    {"skill": "AutoCAD Basics", "months": "September", "weekly_hours": 4, "what_to_learn": "2D drawing, dimensions, constraints; basic part sketching", "progress_pct": 20},
+    {"skill": "FEA Concepts", "months": "October", "weekly_hours": 4, "what_to_learn": "What is FEA, meshing, boundary conditions, stress results interpretation (ANSYS free)", "progress_pct": 10},
+    {"skill": "LaTeX Basics", "months": "November", "weekly_hours": 3, "what_to_learn": "Writing equations, tables, figures; clean formula reference sheets", "progress_pct": 50},
+    {"skill": "Calculator Mastery", "months": "December-January", "weekly_hours": 2, "what_to_learn": "CASIO FX-991EX: table mode, complex numbers, matrix solve, integration, statistics", "progress_pct": 60},
+    {"skill": "Automation Basics", "months": "All Months", "weekly_hours": 1, "what_to_learn": "Sensor-actuator concepts; PLC & microcontroller interfacing with mechanical systems", "progress_pct": 10}
+  ],
+  "resources": [
+    {"name": "NPTEL Engineering Mathematics", "type": "Video + Notes", "subjects": "Maths (all chapters)", "link": "https://nptel.ac.in"},
+    {"name": "NPTEL Thermodynamics (IIT KGP)", "type": "Video Lectures", "subjects": "Thermodynamics", "link": "https://nptel.ac.in/courses/112105123"},
+    {"name": "NPTEL SOM (IIT KGP)", "type": "Video Lectures", "subjects": "Strength of Materials", "link": "https://nptel.ac.in"},
+    {"name": "NPTEL Fluid Mechanics (IIT Madras)", "type": "Video Lectures", "subjects": "Fluid Mechanics", "link": "https://nptel.ac.in/courses/112106220"},
+    {"name": "NPTEL Manufacturing (IITK)", "type": "Video + PDF", "subjects": "Manufacturing Science", "link": "https://nptel.ac.in"},
+    {"name": "GATE PYQs (2010-2024)", "type": "Practice Papers", "subjects": "All Subjects", "link": "https://gateoverflow.in"},
+    {"name": "Made Easy Free Notes (PDF)", "type": "Notes", "subjects": "All ME Subjects", "link": "https://made-easy.in/study-material"},
+    {"name": "Khan Academy (Maths)", "type": "Video", "subjects": "Maths basics", "link": "https://khanacademy.org"},
+    {"name": "MIT OpenCourseWare Thermo", "type": "Lecture Notes", "subjects": "Thermodynamics", "link": "https://ocw.mit.edu"},
+    {"name": "Anki (Flashcard App)", "type": "Tool", "subjects": "Formula memorisation", "link": "https://apps.ankiweb.net"},
+    {"name": "Overleaf (LaTeX)", "type": "Tool", "subjects": "Note-making", "link": "https://overleaf.com"},
+    {"name": "ANSYS Student", "type": "Software", "subjects": "FEA / Skill Dev", "link": "https://ansys.com/academic/students"}
+  ],
+  "sample_week_timetable": {
+    "phase": "Foundation Phase (June Week 1)",
+    "note": "Weekdays = 3 hrs GATE + 1 hr Skill | Weekends = 7 hrs GATE + 1 hr Skill | Total ~= 27 hrs/week",
+    "slots": [
+      {"time": "6:00-7:00 AM", "MON": "Maths: Calculus Conceptual", "TUE": "SOM: Stress-Strain Formula", "WED": "Maths: Matrices Solved Examples", "THU": "SOM: Bending Moment Basics", "FRI": "Maths: DE Practice Set", "SAT": "Thermo: Laws I&II Concepts", "SUN": "Manufacturing: Casting Overview"},
+      {"time": "7:00-8:00 AM", "MON": "Maths: Practice PYQs (10 Qs)", "TUE": "SOM: PYQ Solving", "WED": "Maths: Eigen Values PYQ", "THU": "SOM: Shear Force PYQs", "FRI": "Maths: Full Revision Sprint", "SAT": "Thermo: PYQs (15 questions)", "SUN": "Manufacturing: PYQs Batch"},
+      {"time": "8:00-9:00 AM (Skill Slot)", "MON": "Python: NumPy Basics", "TUE": "Excel: Data Analysis", "WED": "Python: Plotting Graphs", "THU": "Excel: Pivot Tables", "FRI": "Python: ODE Solver", "SAT": "CAD: AutoCAD Intro", "SUN": "FEA: Basic Concepts"},
+      {"time": "5:30-6:30 PM", "MON": "Aptitude: 10 Q Practice", "TUE": "Aptitude: Verbal + Quant", "WED": "Aptitude: Mock 10 Q", "THU": "Fluid Mech: Fluid Statics", "FRI": "Aptitude: Data Interp.", "SAT": "Aptitude: Week Review", "SUN": "Thermo: Rankine Cycle"},
+      {"time": "6:30-7:00 PM", "MON": "Active Recall & Flashcards", "TUE": "Active Recall & Flashcards", "WED": "Active Recall & Flashcards", "THU": "Active Recall & Flashcards", "FRI": "Weekly Review & Spaced Rep.", "SAT": "Formula Memorise", "SUN": "Weekend Wrap-up Quiz"}
+    ]
+  },
+  "study_tactics": [
+    {"name": "Spaced Repetition", "detail": "Review notes after 1 day -> 3 days -> 7 days -> 21 days. Use Anki or handwritten flashcards for formulas."},
+    {"name": "Active Recall", "detail": "Close book, write all formulas from memory daily. Struggle = learning; easy = review is needed."},
+    {"name": "Mock Test Simulation", "detail": "Solve 2 mock tests per week from December. Simulate real conditions (3 hrs, no breaks, same time as GATE)."},
+    {"name": "Focus Mode", "detail": "Phone in another room. Use Forest app or airplane mode. One subject per slot -- no multi-tasking."},
+    {"name": "Synergy Method", "detail": "If college teaches a subject this semester, make it the GATE focus too -- saves ~30% total study time."},
+    {"name": "Pomodoro / Deep Work", "detail": "25 min study + 5 min break. For 2-hr sessions: 4 cycles. Build exam endurance gradually."}
+  ],
+  "subject_progress_tracker_template": {
+    "columns": ["subject", "target_months", "current_score_1_10", "target_score", "pyqs_done", "formula_sheet_ready", "weak_topics"],
+    "rows_seed": [
+      {"subject": "Engineering Mathematics", "target_months": "Jun-Jul", "target_score": 9},
+      {"subject": "Strength of Materials", "target_months": "Jun-Aug", "target_score": 9},
+      {"subject": "Thermodynamics", "target_months": "Jun-Aug", "target_score": 8},
+      {"subject": "Manufacturing Science", "target_months": "Jul-Aug", "target_score": 8},
+      {"subject": "Fluid Mechanics", "target_months": "Sep-Oct", "target_score": 8},
+      {"subject": "Theory of Machines", "target_months": "Sep-Oct", "target_score": 7},
+      {"subject": "Machine Design", "target_months": "Oct", "target_score": 7},
+      {"subject": "Heat Transfer", "target_months": "Oct-Nov", "target_score": 7},
+      {"subject": "Industrial Engineering", "target_months": "Nov", "target_score": 8},
+      {"subject": "Engineering Mechanics", "target_months": "Aug", "target_score": 7},
+      {"subject": "General Aptitude", "target_months": "All", "target_score": 10}
+    ]
+  },
+  "mock_test_log_template": {
+    "columns": ["mock_number", "date", "score_out_of_100", "maths_score", "core_score", "aptitude_score", "remarks"],
+    "target_by_january_2026": ">70"
+  }
+}

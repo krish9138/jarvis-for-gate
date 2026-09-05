@@ -1,0 +1,91 @@
+# ESE / GATE ICT - Lectures 08 & 09: Network History, Protocols, Transmission Media & Network Devices
+By Haider Sir (PW)
+
+## 1. History of the Internet & Key Milestones
+- **1967–1969 (ARPANET Birth)**:
+  - Advanced Research Projects Agency (ARPA) established the initial 4-node network using **NCP (Network Control Protocol)**.
+  - The 4 original nodes were: **UCLA**, **UCSB**, **Stanford Research Institute (SRI)**, and **University of Utah**.
+- **1972 ("Internetting" & Gateway Concept)**:
+  - **Vint Cerf and Bob Kahn** proposed connecting heterogeneous networks and introduced the concept of a **"Gateway"** (modern-day **Router**).
+- **1973–1983 (TCP/IP Development & Adoption)**:
+  - 1981: TCP split into **TCP** (connection management, segmentation, reassembly, error control) and **IP** (datagram routing & addressing).
+  - **January 1, 1983**: TCP/IP officially replaced NCP on ARPANET.
+- **Subsequent Network Expansions**:
+  - **1983 MILNET**: Military portion split from ARPANET.
+  - **1981 CSNET**: Computer Science Network for universities sponsored by NSF.
+  - **1986 NSFNET**: High-speed backbone connecting supercomputing centers (replaced ARPANET in 1990).
+  - **1991 ANSNET**: Advanced Network & Services built by IBM, Merit, and MCI.
+  - **World Wide Web (WWW)**: Invented by **Tim Berners-Lee at CERN** in 1989-1990, triggering global commercial explosion.
+
+---
+
+## 2. Protocols, Standards & Administrative Bodies
+### A. The 3 Core Elements of a Protocol:
+1. **Syntax**: Structure, format, and bit order of data (e.g., header format).
+2. **Semantics**: Meaning and interpretation of each section of bits and corresponding control actions.
+3. **Timing**: When data should be sent, how fast it can be transmitted (flow control), and speed matching.
+
+### B. Standards Types:
+- **De Facto Standards** ("By Fact"): Adopted through widespread industry usage without formal approval by an official committee (e.g., Microsoft Office formats, DVD standards).
+- **De Jure Standards** ("By Law"): Legislated and officially approved by recognized standards organizations (e.g., IEEE 802.11, ITU protocols).
+
+### C. Standards Organizations & Internet Administration:
+- **ISO**: International Organization for Standardization (developed 7-layer OSI model).
+- **ITU / ITU-T**: International Telecommunication Union (telecom & compatibility standards).
+- **IEEE**: Institute of Electrical and Electronics Engineers (developed IEEE 802 LAN/WAN standards).
+- **W3C**: World Wide Web Consortium (develops HTML, CSS, XML web standards).
+- **IETF (Internet Engineering Task Force)**: Develops and maintains standard Internet protocols (TCP/IP, HTTP, SMTP) based on the philosophy of *"Rough consensus and running code"*.
+- **IRTF**: Focuses on long-term networking research.
+- **IAB**: Internet Architecture Board (technical advisory to ISOC).
+
+---
+
+## 3. Switching Techniques: Circuit vs Packet Switching
+| Feature | Circuit Switching | Packet Switching |
+|---|---|---|
+| **Path Establishment** | Dedicated physical circuit reserved for entire duration | Connectionless; packets routed independently over shared links |
+| **Resource Allocation** | Fixed bandwidth reserved (e.g., traditional telephone network using FDM/TDM) | Dynamic bandwidth sharing; statistical multiplexing |
+| **Efficiency** | Inefficient when connection is idle (bursty data traffic) | Highly efficient utilization of network links |
+| **Delay Characteristics** | Guaranteed performance, zero queuing delays once set up | Queuing delays and potential packet drop during congestion |
+
+---
+
+## 4. Transmission Media: Guided vs Unguided
+### A. Guided (Bounded) Media:
+1. **Twisted Pair Cable**: Two insulated copper wires twisted together to cancel electromagnetic interference (crosstalk). Inexpensive, easy to install, limited bandwidth. (UTP Cat 5/6).
+2. **Coaxial Cable**: Central copper conductor surrounded by dielectric insulator and metallic shield. Better noise immunity than twisted pair (used in cable TV and early Ethernet).
+3. **Fiber Optic Cable**: Transmits pulses of light through high-purity glass/plastic core via Total Internal Reflection. Extremely high bandwidth, complete immunity to EMI, very low attenuation, highly secure against wiretapping.
+
+### B. Unguided (Wireless) Media:
+1. **Infrared**: Low-frequency light waves for ultra-short range, line-of-sight communication; cannot penetrate solid walls (secure against eavesdropping).
+2. **Radio Waves & Microwaves**: Omnidirectional or directional RF signals covering wide geographic areas.
+
+---
+
+## 5. Serial vs Parallel Transmission (The High-Speed Paradox)
+- **Parallel Transmission**: Multiple bits (e.g., 8 bits of a byte) sent simultaneously across parallel wires. Historically used for short-distance internal buses (IDE, PCI, LPT printers).
+- **Serial Transmission**: Bits sent sequentially one after another over a single wire/channel.
+- **The Paradox**: Modern high-speed interconnects (PCIe, SATA, USB 3.0, Gigabit Ethernet) switched to **Serial** because at gigahertz frequencies, managing clock synchronization and **signal skew** across parallel wires becomes physically impossible.
+
+---
+
+## 6. Network Devices Across OSI Layers
+| Device | Operating OSI Layer | Functionality & Intelligence |
+|---|---|---|
+| **Repeater** | **Layer 1 (Physical)** | Non-intelligent signal amplifier/regenerator; extends maximum cable length. |
+| **Hub** | **Layer 1 (Physical)** | Multi-port repeater. Rebroadcasts incoming bit streams to all ports; shares a single collision domain. Obsolete. |
+| **Bridge** | **Layer 2 (Data Link)** | Filters and forwards frames between 2 network segments based on hardware **MAC addresses**; divides collision domains. |
+| **Switch** | **Layer 2 (Data Link)** | Intelligent multi-port bridge. Maintains MAC address table, forwards frames **only to destination port**, creates separate collision domain for every port. |
+| **Router** | **Layer 3 (Network)** | Connects different logical networks using **IP addresses**; determines optimal routing paths ("Post Office of the Internet"); blocks broadcast traffic. |
+| **Gateway** | **Layer 3 to Layer 7** | Protocol converter connecting networks with completely different protocol architectures. |
+| **Modem** | **Physical Layer (DCE)** | Modulates digital computer data to analog signals for telephone/cable lines, and demodulates returning signals. |
+
+---
+
+## 7. Network Topologies Matrix
+- **Bus Topology**: Single shared backbone cable with terminators at both ends. Simple and cheap, but single cable break halts whole network.
+- **Star Topology**: All nodes connect to central Switch/Hub. De facto modern standard; single cable fault affects only that node.
+- **Ring Topology**: Circular point-to-point links using **Token Passing** (deterministic, no collisions).
+- **Mesh Topology**: Every device connected to every other device via dedicated P2P links.
+  $$\text{Number of Physical Links in Full Mesh} = \frac{n(n - 1)}{2}$$
+  Maximum fault tolerance and security, but expensive cabling.

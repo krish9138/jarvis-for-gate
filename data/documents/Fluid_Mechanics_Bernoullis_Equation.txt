@@ -1,0 +1,52 @@
+# GATE Mechanical Engineering: Fluid Mechanics
+## Module: Fluid Dynamics & Bernoulli's Equation — Detailed Study Notes
+
+### 1. First-Principles Derivation of Bernoulli's Equation
+Bernoulli's equation is a statement of the principle of **Conservation of Mechanical Energy** for flowing fluids. It is derived by integrating Euler's equation of motion along a streamline.
+
+#### Euler's Equation of Motion along a Streamline ($s$):
+Considering pressure forces and gravity forces acting on a fluid element of mass $dm = \rho \, dA \, ds$:
+$$-\frac{\partial p}{\partial s} ds \, dA - \rho g \, dA \, ds \cos\theta = \rho \, dA \, ds \left(v \frac{\partial v}{\partial s}\right)$$
+Dividing by $\rho \, dA \, ds$:
+$$\frac{dp}{\rho} + v \, dv + g \, dz = 0 \quad \text{(Euler's Equation)}$$
+
+Integrating along a streamline for constant density $\rho$ (incompressible fluid):
+$$\int \frac{dp}{\rho} + \int v \, dv + \int g \, dz = \text{Constant}$$
+$$\frac{P}{\rho} + \frac{v^2}{2} + g z = \text{Constant} \quad \text{(Energy per unit mass, } J/kg\text{)}$$
+
+Dividing by $g$:
+$$\frac{P}{\rho g} + \frac{v^2}{2g} + z = H = \text{Constant} \quad \text{(Energy per unit weight / Head form, in meters)}$$
+
+---
+
+### 2. Physical Meaning of Energy Heads
+- **Pressure Head ($\frac{P}{\rho g}$)**: Energy due to fluid pressure; height of a fluid column that produces static pressure $P$.
+- **Velocity / Kinetic / Dynamic Head ($\frac{v^2}{2g}$)**: Kinetic energy per unit weight of fluid.
+- **Datum / Potential Head ($z$)**: Elevation potential energy relative to an arbitrary reference datum.
+- **Total Head ($H$)**: Sum of all three heads; constant along a streamline in ideal frictionless flow.
+
+---
+
+### 3. Core Assumptions for Validity of Bernoulli's Equation (GATE Trap Points ⚠️)
+For classical Bernoulli's equation to hold strictly, the flow must satisfy:
+1. **Steady Flow**: Flow parameters do not change with time ($\frac{\partial}{\partial t} = 0$).
+2. **Incompressible Flow**: Density $\rho$ is constant throughout ($Ma < 0.3$).
+3. **Inviscid / Frictionless Flow**: Viscous shear stresses $\mu = 0$ (no energy dissipation into heat).
+4. **Flow along a Streamline**: Total head is constant along the *same* streamline. (Note: If the flow is also **irrotational** ($\nabla \times \vec{v} = 0$), the constant $H$ is identical across all streamlines throughout the flow field).
+
+---
+
+### 4. Engineering Applications in GATE
+1. **Venturimeter & Orificemeter**: Measures volumetric flow rate $Q$ in a pipe by creating a pressure drop across a throat constriction:
+   $$Q_{actual} = C_d \frac{a_1 a_2}{\sqrt{a_1^2 - a_2^2}} \sqrt{2g \Delta h}$$
+   Where $C_d$ is the coefficient of discharge ($C_d \approx 0.95 - 0.98$ for Venturi, $\approx 0.60 - 0.65$ for Orifice).
+2. **Pitot Tube**: Measures local stagnation and static pressures to determine flow velocity:
+   $$P_{stagnation} = P_{static} + \frac{1}{2}\rho v^2 \implies v = \sqrt{\frac{2(P_{stag} - P_{stat})}{\rho}} = \sqrt{2gh}$$
+3. **Torricelli's Law of Efflux**: Velocity of liquid discharging through an orifice at depth $h$ below free surface: $v = \sqrt{2gh}$.
+
+---
+
+### 5. Hydraulic Grade Line (HGL) vs Energy Grade Line (EGL)
+- **EGL (Total Energy Line)** = $\frac{P}{\rho g} + \frac{v^2}{2g} + z$. In ideal flow, EGL is horizontal. In real flow, EGL slopes downward in the flow direction due to frictional head loss $h_f = \frac{4fLv^2}{2gd}$.
+- **HGL (Piezometric Head Line)** = $\frac{P}{\rho g} + z$.
+- Vertical distance between EGL and HGL is always the Velocity Head $\frac{v^2}{2g}$.

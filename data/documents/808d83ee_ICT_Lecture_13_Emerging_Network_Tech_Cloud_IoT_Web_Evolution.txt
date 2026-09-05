@@ -1,0 +1,125 @@
+# ESE / GATE ICT - Lecture 13: Latest Developments in Network Technology
+By Haider Sir (PW)
+
+## 1. Latest Network Communication Technologies
+### A. Li-Fi (Light Fidelity)
+- High-speed, bidirectional, fully networked optical wireless communication technology proposed by **Professor Harald Haas**.
+- **Working Principle**:
+  - Part of Optical Wireless Communication (OWC).
+  - Uses the **visible light portion** of the electromagnetic spectrum (instead of traditional radio frequency signals).
+  - Data is transmitted by modulating light intensity (e.g., LED switching at nanosecond speeds), detected and demodulated by a photodetector.
+- **Li-Fi vs Wi-Fi**: Li-Fi uses light waves (faster, secure within walls, no RF interference) vs Wi-Fi uses RF signals (travels through walls, prone to RF interference).
+
+### B. White-Fi Technology
+- Uses the **"white spaces"** (unused spectrum gaps) in TV broadcast frequencies (VHF/UHF bands).
+- **Key Insight in India**: Approximately **93% of the TV broadcast spectrum** remains unused white space.
+- **Primary Application**: Cost-effective "last mile broadband connection" to connect rural, remote, and underserved areas.
+
+### C. Project Loon
+- Initiative originally by **X (formerly Google X)**.
+- Designed to provide internet connectivity to rural and remote regions using high-altitude helium balloons floating in the **Stratosphere** (approx. 20 km altitude).
+- Navigates by moving up/down to catch different wind currents; connects directly to LTE smartphones on the ground.
+
+---
+
+## 2. Internet of Things (IoT)
+- **Definition**: Technology of connecting embedded computing devices with unique identifiers (IP/MAC) to the internet infrastructure without requiring human-to-human or human-to-computer interaction.
+- **Beyond M2M**: Transcends simple Machine-to-Machine communication to create system-to-system and service-to-service autonomous integrations.
+- **Projected Scale**: Over 26-30 billion connected devices.
+
+---
+
+## 3. Cloud Computing - Concepts, Characteristics, and Models
+### What is Cloud Computing?
+- Technology that uses the internet and centralized remote servers to maintain data and applications. Heavy computation and storage are transferred from local PCs to the cloud.
+
+### 5 Essential Characteristics of Cloud Computing (NIST Framework)
+1. **On-demand Self-Service**: Users provision computing capabilities (server time, network storage) automatically without human intervention from the service provider.
+2. **Broad Network Access**: Capabilities available over the network and accessed through standard mechanisms (browsers on laptops, mobile phones).
+3. **Resource Pooling**: Provider's computing resources are pooled in a multi-tenant model to serve multiple consumers dynamically.
+4. **Rapid Elasticity**: Resources can be elastically provisioned and released to scale outward or inward rapidly based on demand.
+5. **Measured Service**: Resource usage is monitored, controlled, reported, and billed transparently on a "pay-per-use" / "pay-as-you-go" basis (like utility bills).
+
+### Cloud Computing Architecture Components
+- **Front-end**: Client devices and web browser interfaces.
+- **Back-end**:
+  - **Middleware**: Software that enables communication and resource management between networked computers.
+  - **Server Virtualization**: Core enabler that partitions a single physical server into multiple independent virtual machines (VMs), maximizing hardware utilization.
+  - **Redundancy**: Replicating data across multiple independent storage locations to ensure high availability and disaster recovery.
+
+### 3 Cloud Service Models (SPI Model)
+1. **IaaS (Infrastructure as a Service)**:
+   - Outsources fundamental hardware resources (virtual servers, raw storage, network firewalls).
+   - Consumer manages: Operating System (OS), middleware, runtime, and applications.
+   - Examples: AWS EC2, Google Compute Engine, Microsoft Azure VMs.
+2. **PaaS (Platform as a Service)**:
+   - Provides runtime environment and developer tools to build and deploy applications without managing underlying OS, servers, or storage.
+   - Consumer manages: Applications and data.
+   - Examples: Google App Engine, AWS Elastic Beanstalk, Heroku.
+3. **SaaS (Software as a Service)**:
+   - Complete end-user applications delivered over the internet via web browsers.
+   - Consumer manages: No underlying infrastructure or code.
+   - Examples: Gmail, Microsoft Office 365, Google Workspace, Salesforce.
+
+### 4 Cloud Delivery / Deployment Models
+1. **Public Cloud**: Owned and operated by third-party service providers (AWS, Azure, GCP) accessible to general public. Cost-effective for non-sensitive workloads.
+2. **Private Cloud**: Cloud infrastructure operated solely for a single organization. Maximum security and regulatory control.
+3. **Hybrid Cloud**: Combines public and private clouds connected by standard technology. Allows sensitive/critical data on private cloud and burst capacity on public cloud.
+4. **Community Cloud**: Shared infrastructure for multiple organizations with common concerns (compliance, mission, security requirements e.g., shared between banks or research institutions).
+
+---
+
+## 4. Grid Computing
+- **Definition**: Distributed computing architecture that coordinates networked, heterogeneous computational resources across multiple administrative domains to solve massive scientific/computational problems (e.g., climate modeling, protein folding).
+- **Grid Computing vs Cluster**:
+  - Grid computing is **heterogeneous** and spans **multiple administrative domains**.
+  - Traditional cluster computing is homogeneous and localized in a single domain/data center.
+- **Indian Initiative**: **GARUDA** (Global Access to Resource Using Distributed Architecture), implemented by **C-DAC** across 17 locations.
+- **Layered Architecture**: Application Layer -> Middleware Layer -> Resource Layer -> Network Layer.
+
+---
+
+## 5. Data Compression - Lossless vs Lossy
+| Parameter | Lossless Compression | Lossy Compression |
+|---|---|---|
+| **Data Integrity** | No data loss (1:1 mapping); exact original reconstructed | Discards inaudible/invisible redundant data (Many:1 mapping) |
+| **Noise** | Introduces zero noise / distortion | Introduces noise / artifacts (e.g. pre-echo distortion in audio) |
+| **Compression Ratio** | Lower compression ratio | Much higher compression ratio |
+| **Applications** | Text files, source code, program executables, databases, ZIP, PNG, GIF | Audio (MP3, AAC), Video (H.264, VP9), Images (JPEG), Video streaming |
+| **Key Algorithms** | **RLE** (Run-Length Encoding), **LZW** (Lempel-Ziv-Welch - GIF/PDF), **BWT** (Burrows-Wheeler Transform - bzip2) | **DCT** (Discrete Cosine Transform - JPEG, MP3) |
+
+---
+
+## 6. Web Evolution (Web 1.0 to Web 4.0)
+- **Web 1.0 ("The Static / Read-Only Web")** (Early 1990s–mid 2000s):
+  - Connect Information; static HTML content published by companies; one-way server-to-user communication.
+  - First graphical web browser: **NCSA Mosaic** (1993).
+- **Web 2.0 ("The Social / Read-Write Web")** (2004 onwards):
+  - Connect People; User-Generated Content, social networking, interactive web apps (AJAX), tagging/folksonomies, APIs.
+- **Web 3.0 ("The Semantic / Executable Web")** (2010s–present):
+  - Connect Knowledge; Semantic Web (RDF, SPARQL, machine-readable data meaning), AI & Machine Learning.
+- **Web 4.0 ("The Symbiotic / Intelligent Web")** (Future):
+  - Connect Machines; Autonomous Intelligent Agent interactions, seamless digital-physical integration, ultra-low latency.
+
+### HTML vs XML
+- **HTML (HyperText Markup Language)**: Designed for **displaying data**; tags are **predefined** by W3C; focus on presentation.
+- **XML (eXtensible Markup Language)**: Designed to **store and transport data**; tags are **user-defined** and self-descriptive; focus on data meaning.
+
+---
+
+## 7. Lecture 13 - Practice MCQs & Answer Keys
+1. **Q1**: Scientific project utilizing idle CPU cycles of personal computers globally -> **Answer: Grid Computing (Option b)**
+2. **Q2**: Fundamental difference between HTML and XML -> **Answer: HTML tags are predefined, while XML tags are user-defined (Option c)**
+3. **Q3**: Music streaming app removing inaudible audio data permanently -> **Answer: Lossy Compression (Option b)**
+4. **Q4**: First graphical web browser that popularized WWW -> **Answer: Mosaic (Option c)**
+5. **Q5**: Indian Grid Computing Initiative implemented by C-DAC across 17 locations -> **Answer: GARUDA (Option c)**
+6. **Q6**: Characteristics associated with Web 2.0 -> **Answer: 2 and 3 only (Option b)** (User-generated content, The Social Web).
+7. **Q7**: True statements about data compression -> **Answer: 1 and 3 only (Option a)** (Lossless ideal for text/code; Lossy achieves higher compression ratio).
+8. **Q8**: Web evolution matching -> **Answer: 1, 2, 3 and 4 (Option d)** (1.0 Info, 2.0 People, 3.0 Knowledge, 4.0 Machines).
+9. **Q9**: Grid computing distinct features -> **Answer: 1 and 2 only (Option a)** (Different administrative domains, Heterogeneous resources).
+10. **Q10**: URL components defined by `http://www.example.com:80/path` -> **Answer: 1, 2, 3 and 4 (Option d)** (Protocol, Host/Domain, Port, Path).
+11. **Q11 (Assertion-Reason)**: A: WWW and Internet are same (False). R: WWW is architectural framework on Internet (True) -> **Answer: A is false but R is true (Option d)**
+12. **Q12 (Assertion-Reason)**: A: Pre-echo can occur in lossy audio (True). R: Happens because compression algorithm uses shorter transform window to improve time resolution (Reason incorrect explanation) -> **Answer: Both A and R are true but R is NOT the correct explanation of A (Option b)**
+13. **Q13 (Assertion-Reason)**: A: Grid Computing designed to solve massive problems. R: Unused CPU cycles/storage of disparate computers -> **Answer: Both A and R are true and R is the correct explanation of A (Option a)**
+14. **Q14 (Assertion-Reason)**: A: Web 2.0 is Read-Only (False, it is Read-Write). R: Blogs/wikis central to Web 2.0 (True) -> **Answer: A is false but R is true (Option d)**
+15. **Q15 (Assertion-Reason)**: A: XML is self-descriptive (True). R: Tags are predefined by W3C (False, XML tags are user-defined) -> **Answer: A is true but R is false (Option c)**

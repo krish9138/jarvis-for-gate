@@ -1,0 +1,63 @@
+# GATE Mechanical Engineering: Strength of Materials
+## Module: Pressure Vessels (Thin Cylinders & Spheres) — DPP-01 Detailed Notes & Solutions
+
+### 1. Fundamental Formulas & First Principles for Thin Cylinders
+A cylinder is classified as a "thin cylinder" when the ratio of wall thickness to internal diameter is less than 1/20 (i.e., $t / d_i < 1/20$ or $t / R < 0.1$). In thin cylinder theory, the radial stress $\sigma_r$ across the wall thickness is neglected ($ \sigma_r \approx 0 $) because it is negligible compared to the circumferential and longitudinal stresses.
+
+#### Key Stress Formulas:
+1. **Circumferential / Hoop Stress ($\sigma_c$ or $\sigma_\theta$):**
+   $$\sigma_c = \frac{p \cdot d}{2t} = \frac{p \cdot r}{t}$$
+   - $p$ = Internal fluid/gas gauge pressure ($N/mm^2$ or $MPa$)
+   - $d$ = Internal diameter ($mm$), $r$ = Internal radius ($mm$)
+   - $t$ = Wall thickness ($mm$)
+   - Nature of stress: Tensile along the circumference.
+
+2. **Longitudinal / Axial Stress ($\sigma_L$ or $\sigma_x$):**
+   $$\sigma_L = \frac{p \cdot d}{4t} = \frac{p \cdot r}{2t} = \frac{\sigma_c}{2}$$
+   - Valid for closed-ended cylinders. If ends are open or unrestrained, $\sigma_L = 0$.
+
+3. **Maximum In-Plane Shear Stress ($\tau_{max, in-plane}$):**
+   $$\tau_{max, in-plane} = \frac{\sigma_c - \sigma_L}{2} = \frac{pd/2t - pd/4t}{2} = \frac{pd}{8t} = \frac{pr}{4t}$$
+
+4. **Absolute Maximum Shear Stress ($\tau_{max, abs}$):**
+   Since the three principal stresses are $\sigma_1 = \sigma_c = \frac{pd}{2t}$, $\sigma_2 = \sigma_L = \frac{pd}{4t}$, and $\sigma_3 = \sigma_r = 0$:
+   $$\tau_{max, abs} = \frac{\sigma_1 - \sigma_3}{2} = \frac{\sigma_c - 0}{2} = \frac{p d}{4t} = \frac{p r}{2t}$$
+
+5. **Volumetric Strain ($\epsilon_v = \Delta V / V$):**
+   $$\epsilon_v = 2\epsilon_c + \epsilon_L = \frac{p d}{4 t E}(5 - 4\mu) = \frac{p r}{2 t E}(5 - 4\mu)$$
+   Where $E$ is Young's Modulus and $\mu$ is Poisson's ratio.
+
+---
+
+### 2. DPP-01 Solved Questions & Special Cases
+
+#### Q1: Thin Cylindrical Tank Maximum Shear Stress
+- Given: Pressure $p = 500\text{ kPa} = 0.5\text{ MPa}$, inner radius $R = 4\text{ m} = 4000\text{ mm}$, thickness $t = 40\text{ mm}$.
+- Calculation: $\tau_{max, abs} = \frac{p R}{2t} = \frac{0.5 \times 4000}{2 \times 40} = 25\text{ MPa}$.
+- Answer: **25 MPa**.
+
+#### Q2: Volumetric Strain under Internal Pressure
+- Given: $p = 0.5\text{ MPa}$, $R = 300\text{ mm}$, $t = 1.5\text{ mm}$, $L = 2\text{ m}$, $E = 200\text{ GPa} = 2 \times 10^5\text{ MPa}$, $\mu = 0.33$.
+- Calculation:
+  $$\epsilon_v = \frac{p R}{2 t E}(5 - 4\mu) = \frac{0.5 \times 300}{2 \times 1.5 \times 200000} \times (5 - 4 \times 0.33) = \frac{150}{600000} \times 3.68 = 9.2 \times 10^{-4}$$
+- Answer: **$9.2 \times 10^{-4}\text{ mm}^3/\text{mm}^3$**.
+
+#### Q3: Stresses on Inclined Butt-Welded Seam
+- Given: Outside diameter $D = 200\text{ mm}$, thickness $t = 5\text{ mm}$, internal pressure $p = 1.5\text{ MPa}$, weld angle $25^\circ$ with transverse plane.
+- Principal stresses: $\sigma_x = \sigma_c = \frac{p D}{2t} = \frac{1.5 \times 200}{2 \times 5} = 30\text{ MPa}$, $\sigma_y = \sigma_L = \frac{p D}{4t} = 15\text{ MPa}$, $\tau_{xy} = 0$.
+- For plane parallel to weld ($\theta = -65^\circ$ from x-axis):
+  $$\tau_w = -\left(\frac{\sigma_x - \sigma_y}{2}\right)\sin(2\theta) = -\left(\frac{30 - 15}{2}\right)\sin(-130^\circ) = 5.745\text{ MPa} \approx 5.74\text{ MPa}$$
+- Answer: **5.74 MPa**.
+
+#### Q4: Standpipe Open-Top Water Pressure
+- Given: Diameter $d = 2.5\text{ m}$, thickness $t = 15\text{ mm} = 0.015\text{ m}$, allowable $\sigma_c = 15\text{ MPa} = 15 \times 10^6\text{ Pa}$.
+- Gauge pressure at base: $p_{max} = \rho g h = 1000 \times 9.81 \times h$.
+- Circumferential stress: $\sigma_{c, max} = \frac{p_{max} d}{2t} \implies 15 \times 10^6 = \frac{(1000 \times 9.81 \times h) \times 2.5}{2 \times 0.015} \implies h = 18.35\text{ m}$.
+- Answer: **18.35 m**.
+
+#### Q10: Condition for Pure Shear State of Stress in a Cylindrical Tank
+- Under internal gas pressure $p$ and axial compressive force $F$:
+  $$\sigma_c = \frac{p r}{t}, \quad \sigma_L = \frac{p r}{2t} - \frac{F}{2\pi r t}$$
+- Condition for 'Pure Shear' ($\sigma_1 + \sigma_2 = 0 \implies \sigma_c + \sigma_L = 0$):
+  $$\frac{p r}{t} + \left(\frac{p r}{2t} - \frac{F}{2\pi r t}\right) = 0 \implies \frac{3 p r}{2t} = \frac{F}{2\pi r t} \implies F = 3\pi p r^2$$
+- Answer: **(C) $3\pi p r^2$**.

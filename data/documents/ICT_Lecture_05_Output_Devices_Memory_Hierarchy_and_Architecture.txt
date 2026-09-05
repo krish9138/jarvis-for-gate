@@ -1,0 +1,89 @@
+# ESE / GATE ICT - Lecture 05: Output Devices, Memory Hierarchy, Motherboards & Software Systems
+By Haider Sir (PW)
+
+## 1. Visual Display Units (Monitors & Displays)
+- **Pixel (Picture Element)**: Smallest addressable dot of color in a raster image.
+- **Resolution**: Total number of distinct pixels (e.g. Full HD $1920 \times 1080 = 2.07\text{ MP}$, 4K UHD $3840 \times 2160$).
+
+### Display Technologies Comparison:
+| Display Type | Image Generation Mechanism | Backlight Requirement | Contrast & Black Levels |
+|---|---|---|---|
+| **CRT (Cathode Ray Tube)** | Electron gun fires beams through vacuum onto phosphor screen | Self-illuminating phosphors | Excellent color, bulky, high power use |
+| **LCD (Liquid Crystal Display)** | Liquid crystals modulate light from a CCFL cold-cathode fluorescent lamp | Requires CCFL Backlight | Limited viewing angle, slower response |
+| **TFT-LCD (Thin Film Transistor)** | Active-matrix LCD where every pixel has dedicated transistor | Requires Backlight | Brighter, faster, sharper text |
+| **LED Display** | LCD panel using an array of energy-efficient Light Emitting Diodes as backlight | Uses LED array backlight | Thinner panels, higher energy efficiency, better contrast |
+| **Plasma Display** | Small cells of ionized gas (xenon/neon) generate UV light that excites phosphors | Self-illuminating gas cells | Excellent viewing angle, heavy, high power (obsolete) |
+| **OLED (Organic LED)** | Organic carbon-based semiconductor films that emit light when current passes | **NO Backlight Needed (Self-emissive)** | **Infinite Contrast Ratio & Perfect True Blacks** (individual pixels switch off completely) |
+
+---
+
+## 2. Printers & Plotters (Hard Copy Output)
+### A. Impact Printers (Physical contact with inked ribbon against paper):
+1. **Dot Matrix Printer**: Uses printhead with pins ($9$ or $24$ pins) striking ink ribbon. Noisy, low resolution, but can produce carbon multipart copies (invoices, railway reservations).
+2. **Daisy Wheel Printer**: Rotating wheel with embossed letters. High-quality letterform but very slow.
+
+### B. Non-Impact Printers (No mechanical ribbon strike):
+1. **Inkjet Printer**: Electrically sprays microscopic droplets of liquid ink onto paper via piezoelectric or thermal nozzles. Excellent for high-resolution color photographs.
+2. **Laser Printer**: Uses a **laser beam** to draw an electrostatic charge pattern on a photosensitive revolving drum; attracts dry powder **toner** and bonds it to paper with heat/pressure fuser rollers. High speed, crisp text documents.
+3. **Dye-Sublimation Printer**: Uses heat to transfer dye onto special coated paper; produces true continuous-tone photographs that look and feel like photographic lab prints.
+4. **3D Printer**: Additive manufacturing process depositing material layer-by-layer from CAD models.
+
+### C. Plotters:
+- Specialized output device using automated pens to draw vector graphics on large sheets (architectural blueprints, circuit schematics, civil CAD drawings).
+
+---
+
+## 3. Computer Memory Hierarchy
+Organized in a pyramid to optimize speed, capacity, and cost:
+
+```
+          ▲
+         / \     CPU Registers (Fastest, Smallest capacity, Highest cost/bit)
+        /   \    Cache Memory (L1 on core, L2 on-chip, L3 shared)
+       /     \   Primary Memory: Main RAM & ROM (Nanosecond access)
+      /       \  Secondary Storage: SSDs, NVMe, HDDs, Optical (Slower, Terabytes)
+     /_________\
+```
+
+### A. Primary Memory (RAM & ROM):
+- **RAM (Random Access Memory)**: Volatile working memory (loses content when powered off).
+  - **SRAM (Static RAM)**: Built from 4-6 **flip-flop transistors** per bit. Fast, no refresh cycle needed, expensive $\rightarrow$ used in **Cache memory**.
+  - **DRAM (Dynamic RAM)**: Built from **1 transistor + 1 capacitor** per bit. Capacitor leaks charge $\rightarrow$ requires constant periodic **refresh cycles**. Cheaper, dense $\rightarrow$ used in **Main System RAM**.
+  - **SDRAM (Synchronous DRAM)**: Synchronized with the CPU system bus clock.
+- **ROM (Read Only Memory)**: Non-volatile permanent memory.
+  - Holds **BIOS / UEFI firmware** that executes the **POST (Power-On Self-Test)** and bootstraps the OS kernel into RAM.
+  - Evolution: Masked ROM $\rightarrow$ PROM (One-time programmable) $\rightarrow$ EPROM (UV light erasable) $\rightarrow$ EEPROM / Flash (Electrically erasable).
+
+### B. Memory Units & Hierarchy Table:
+- 1 Bit = Binary digit ($0$ or $1$)
+- 1 Nibble = $4\text{ bits}$
+- 1 Byte = $8\text{ bits}$
+- $1\text{ KB} = 1024\text{ Bytes} = 2^{10}\text{ Bytes}$
+- $1\text{ MB} = 1024\text{ KB} = 2^{20}\text{ Bytes}$
+- $1\text{ GB} = 1024\text{ MB} = 2^{30}\text{ Bytes}$
+- $1\text{ TB} = 1024\text{ GB} = 2^{40}\text{ Bytes}$
+- $1\text{ PB} = 1024\text{ TB}$ (PetaByte) $\rightarrow 1\text{ EB} = 1024\text{ PB}$ (ExaByte) $\rightarrow 1\text{ ZB} = 1024\text{ EB}$ (ZettaByte) $\rightarrow 1\text{ YB} = 1024\text{ ZB}$ (YottaByte) $\rightarrow 1\text{ Brontobyte} = 1024\text{ YB} \rightarrow 1\text{ Geopbyte} = 1024\text{ Brontobytes}$.
+
+---
+
+## 4. Motherboard Components, Ports & Software Systems
+### A. Motherboard Architecture:
+- Main PCB housing: CPU Socket, RAM Slots, Chipset (Northbridge/Southbridge or unified PCH), BIOS chip, PCIe Expansion slots.
+- **Ports & Interfaces**:
+  - **PS/2**: 6-pin mini-DIN for legacy keyboards/mice.
+  - **USB (Universal Serial Bus)**: Universal hot-swappable serial interface.
+  - **HDMI**: High-Definition Multimedia Interface (uncompressed digital video + audio).
+  - **VGA (Video Graphics Array)**: 15-pin analog video interface.
+  - **DVI (Digital Visual Interface)**: Digital video standard.
+  - **Ethernet (RJ-45)**: 8P8C modular connector for wired networking.
+  - **Thunderbolt**: High-speed interface (combines PCIe, DisplayPort, and DC power).
+
+### B. System Software vs Application Software:
+- **System Software**: Operating Systems (Windows, Linux, macOS), Device Drivers, Utilities (Antivirus, Disk cleanup).
+- **Language Translators**:
+  - **Assembler**: Translates Assembly mnemonic code (2GL) into Machine code (1GL).
+  - **Compiler**: Translates the entire High-Level Language (HLL) source code into machine code in a single batch before execution (e.g. C, C++, FORTRAN).
+  - **Interpreter**: Translates and executes source code line-by-line in real time (e.g. Python, early BASIC).
+- **Programming Paradigms**:
+  - **Procedural (3GL)**: Functions/procedures operating on data (C, FORTRAN, COBOL).
+  - **Object-Oriented (OOP)**: Encapsulates data and methods into reusable classes/objects (Java, C++, Python).
